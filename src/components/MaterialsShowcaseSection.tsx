@@ -12,7 +12,7 @@ interface ShowcaseItem {
 }
 
 export const MaterialsShowcaseSection: React.FC<MaterialsShowcaseSectionProps> = ({ onCtaClick }) => {
-  // Group 1: 4 materials for Carousel 1
+  // Group 1: 6 materials for Carousel 1
   const carouselRow1: ShowcaseItem[] = [
     {
       id: 'showcase-1',
@@ -34,9 +34,19 @@ export const MaterialsShowcaseSection: React.FC<MaterialsShowcaseSectionProps> =
       url: 'https://i.postimg.cc/g0kjcpQn/Chat-GPT-Image-28-de-ago-de-2026-23-48-26-(6).png',
       title: 'Material Visual 4',
     },
+    {
+      id: 'showcase-9',
+      url: 'https://i.postimg.cc/TPm7w8Dz/Chat-GPT-Image-28-de-ago-de-2026-23-56-12-(7).png',
+      title: 'Material Visual 9',
+    },
+    {
+      id: 'showcase-10',
+      url: 'https://i.postimg.cc/5tv70cCT/Chat-GPT-Image-28-de-ago-de-2026-23-56-13-(8).png',
+      title: 'Material Visual 10',
+    },
   ];
 
-  // Group 2: 4 materials for Carousel 2
+  // Group 2: 6 materials for Carousel 2
   const carouselRow2: ShowcaseItem[] = [
     {
       id: 'showcase-5',
@@ -57,6 +67,16 @@ export const MaterialsShowcaseSection: React.FC<MaterialsShowcaseSectionProps> =
       id: 'showcase-8',
       url: 'https://i.postimg.cc/Ls654Sw8/Chat-GPT-Image-28-de-ago-de-2026-23-48-28-(10).png',
       title: 'Material Visual 8',
+    },
+    {
+      id: 'showcase-11',
+      url: 'https://i.postimg.cc/8CWK586x/Chat-GPT-Image-28-de-ago-de-2026-23-56-13-(9).png',
+      title: 'Material Visual 11',
+    },
+    {
+      id: 'showcase-12',
+      url: 'https://i.postimg.cc/QdvYhNHy/Chat-GPT-Image-28-de-ago-de-2026-23-56-14-(10).png',
+      title: 'Material Visual 12',
     },
   ];
 
