@@ -444,61 +444,6 @@ export const TESTIMONIALS_DATA: TestimonialItem[] = [
     rating: 5,
     highlight: 'Comparativos direto ao ponto',
     quote: 'O material de bolso e as tabelas comparativas (principalmente fala x linguagem e apraxia x disartria) valem cada centavo. Direto ao ponto, sem enrolação e com um design limpo e claro que facilita demais a rotina.'
-  },
-  {
-    id: 'test-04',
-    author: 'Beatriz Nogueira',
-    role: 'Residente em Audiologia Clínica • USP',
-    location: 'Ribeirão Preto, SP',
-    avatarUrl: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=160&h=160&fit=crop&crop=faces&q=80',
-    avatarInitials: 'BN',
-    rating: 5,
-    highlight: 'Esquema da via auditiva impecável',
-    quote: 'O esquema da via auditiva e da cadeia ossicular é de longe o mais didático que já vi. Antes eu perdia horas tentando resumir capítulos gigantescos de livros pesados; agora consigo fazer uma revisão completa em 10 minutos antes de entrar no plantão.'
-  },
-  {
-    id: 'test-05',
-    author: 'Gabriel Siqueira',
-    role: 'Estudante de Fonoaudiologia • 5º semestre',
-    location: 'Rio de Janeiro, RJ',
-    avatarUrl: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=160&h=160&fit=crop&crop=faces&q=80',
-    avatarInitials: 'GS',
-    rating: 5,
-    highlight: 'Qualidade vetorial surpreendente',
-    quote: 'Comprei achando que seria só mais um PDF básico, mas me surpreendeu demais a qualidade vetorial. Dá pra dar zoom máximo no celular sem perder nitidez nenhuma. O bônus dos termos fonoaudiológicos me ajudou muito nos primeiros relatórios.'
-  },
-  {
-    id: 'test-06',
-    author: 'Juliana Paiva',
-    role: 'Fonoaudióloga • Linguagem e Desenvolvimento Infantil',
-    location: 'Porto Alegre, RS',
-    avatarUrl: 'https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=160&h=160&fit=crop&crop=faces&q=80',
-    avatarInitials: 'JP',
-    rating: 5,
-    highlight: 'Organização impecável por módulos',
-    quote: 'A organização em módulos por especialidade agiliza muito. Quando estou com dúvida rápida em marcos do desenvolvimento ou classificação fonética antes de atender, abro direto no tablet. Recomendo de olhos fechados!'
-  },
-  {
-    id: 'test-07',
-    author: 'Larissa Mendonça',
-    role: 'Fonoaudióloga Hospitalar • Disfagia & UTI (CRFa 4-18230)',
-    location: 'Salvador, BA',
-    avatarUrl: 'https://images.unsplash.com/photo-1594824813501-48afab3fe0d4?w=160&h=160&fit=crop&crop=faces&q=80',
-    avatarInitials: 'LM',
-    rating: 5,
-    highlight: 'Segurança clínica nos plantões',
-    quote: 'Trabalho em ambiente hospitalar e o material de disfagia com as fases da deglutição e os pares cranianos me acompanha em todos os plantões. Ter essas referências anatômicas esquematizadas na palma da mão traz uma segurança imensa na hora de discutir conduta.'
-  },
-  {
-    id: 'test-08',
-    author: 'Rodrigo Alencar',
-    role: 'Fonoaudiólogo • Audiologia Clínica & Ocupacional (CRFa 5-21049)',
-    location: 'Brasília, DF',
-    avatarUrl: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=160&h=160&fit=crop&crop=faces&q=80',
-    avatarInitials: 'RA',
-    rating: 5,
-    highlight: 'Material de consulta indispensável',
-    quote: 'As pranchas com os testes de via aérea/óssea, mascaramento e as classificações de perda auditiva tornaram o raciocínio muito mais visual e rápido. Facilitou inclusive para mostrar o diagnóstico com clareza aos pacientes.'
   }
 ];
 
