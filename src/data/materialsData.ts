@@ -367,7 +367,9 @@ export const BONUSES_DATA: BonusItem[] = [
       'Definições diretas sem enrolação técnica excessiva',
       'Exemplos práticos de aplicação'
     ],
-    badge: 'INCLUSO GRATUITAMENTE'
+    badge: 'INCLUSO GRATUITAMENTE',
+    imageUrl: '/bonus/bonus-1.png',
+    fallbackUrl: 'https://i.postimg.cc/SxQV42S2/Chat-GPT-Image-29-de-ago-de-2026-00-16-07.png'
   },
   {
     id: 'bonus-02',

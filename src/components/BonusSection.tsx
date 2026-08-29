@@ -1,13 +1,13 @@
 import React from 'react';
 import { BONUSES_DATA } from '../data/materialsData';
-import { Gift, Sparkles, Check, CheckCircle2, FileText, BookOpen, Layers, ArrowRight } from 'lucide-react';
+import { Gift, Sparkles, CheckCircle2, ArrowRight, Layers, ZoomIn } from 'lucide-react';
 
 interface BonusSectionProps {
   onCtaClick: () => void;
-  onPreviewSheet: (sheetId: string) => void;
+  onPreviewSheet?: (sheetId: string) => void;
 }
 
-export const BonusSection: React.FC<BonusSectionProps> = ({ onCtaClick, onPreviewSheet }) => {
+export const BonusSection: React.FC<BonusSectionProps> = ({ onCtaClick }) => {
   return (
     <section id="bonus" className="py-20 bg-gradient-to-b from-white via-teal-50/20 to-white border-b border-slate-200/60 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -16,7 +16,7 @@ export const BonusSection: React.FC<BonusSectionProps> = ({ onCtaClick, onPrevie
         <div className="text-center max-w-3xl mx-auto space-y-4">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-purple-50 border border-purple-200 text-purple-800 text-xs font-bold uppercase tracking-wider shadow-xs">
             <Gift className="w-3.5 h-3.5 text-purple-600" />
-            Presentes Especiais Inclusos no Acesso
+            <span>Presentes Especiais Inclusos no Acesso</span>
           </div>
 
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight leading-tight">
@@ -47,60 +47,71 @@ export const BonusSection: React.FC<BonusSectionProps> = ({ onCtaClick, onPrevie
                 </div>
 
                 <div className="p-6 flex-1 space-y-4">
-                  {/* Visual mockup card inside bonus - Light modern theme */}
-                  <div className="p-4 rounded-xl bg-gradient-to-br from-teal-50/90 to-slate-100 text-slate-800 shadow-inner relative overflow-hidden border border-teal-100">
-                    <div className="flex items-center justify-between text-[11px] text-teal-700 font-bold mb-2">
-                      <span className="flex items-center gap-1">
-                        <Sparkles className="w-3.5 h-3.5 text-teal-600" />
-                        {bonus.tag}
-                      </span>
-                      <span className="px-2 py-0.5 bg-white rounded-md border border-slate-200 text-slate-600">PDF Digital</span>
+                  {/* Visual mockup card inside bonus */}
+                  {bonus.imageUrl ? (
+                    <div className="rounded-xl overflow-hidden border border-teal-200 bg-slate-50 shadow-inner group/img relative">
+                      <div className="relative aspect-[16/10] overflow-hidden bg-slate-100 flex items-center justify-center">
+                        <img
+                          src={bonus.imageUrl}
+                          alt={bonus.title}
+                          onError={(e) => {
+                            if (bonus.fallbackUrl) {
+                              (e.target as HTMLImageElement).src = bonus.fallbackUrl;
+                            }
+                          }}
+                          referrerPolicy="no-referrer"
+                          className="w-full h-full object-cover object-center group-hover/img:scale-105 transition-transform duration-500"
+                        />
+                        <div className="absolute top-2.5 left-2.5">
+                          <span className="px-2 py-0.5 rounded-md bg-white/90 backdrop-blur-xs text-teal-800 text-[10px] font-bold uppercase tracking-wider border border-teal-200 shadow-xs flex items-center gap-1">
+                            <Layers className="w-3 h-3 text-teal-600" />
+                            {bonus.tag}
+                          </span>
+                        </div>
+                      </div>
                     </div>
-                    
-                    {index === 0 && (
-                      <div className="space-y-1.5 text-xs text-slate-700">
-                        <div className="p-2 bg-white rounded border border-slate-200 shadow-2xs">
-                          <span className="font-bold text-teal-800"># Afasia vs. Apraxia</span>
-                          <p className="text-[11px] text-slate-500 mt-0.5">Definição etiológica, manifestação e topografia</p>
-                        </div>
-                        <div className="p-2 bg-white rounded border border-slate-200 shadow-2xs">
-                          <span className="font-bold text-teal-800"># Processamento Auditivo</span>
-                          <p className="text-[11px] text-slate-500 mt-0.5">Mecanismos fisiológicos e habilidades auditivas</p>
-                        </div>
+                  ) : (
+                    <div className="p-4 rounded-xl bg-gradient-to-br from-teal-50/90 to-slate-100 text-slate-800 shadow-inner relative overflow-hidden border border-teal-100">
+                      <div className="flex items-center justify-between text-[11px] text-teal-700 font-bold mb-2">
+                        <span className="flex items-center gap-1">
+                          <Sparkles className="w-3.5 h-3.5 text-teal-600" />
+                          {bonus.tag}
+                        </span>
+                        <span className="px-2 py-0.5 bg-white rounded-md border border-slate-200 text-slate-600">PDF Digital</span>
                       </div>
-                    )}
 
-                    {index === 1 && (
-                      <div className="space-y-1.5 text-xs text-slate-700">
-                        <div className="grid grid-cols-2 gap-1.5 text-[11px]">
-                          <span className="p-1.5 bg-white rounded border border-slate-200 text-center font-semibold text-slate-800 shadow-2xs">Laringe & Cordas</span>
-                          <span className="p-1.5 bg-white rounded border border-slate-200 text-center font-semibold text-slate-800 shadow-2xs">Língua & Palato</span>
-                          <span className="p-1.5 bg-white rounded border border-slate-200 text-center font-semibold text-slate-800 shadow-2xs">Ouvido & Cóclea</span>
-                          <span className="p-1.5 bg-white rounded border border-slate-200 text-center font-semibold text-slate-800 shadow-2xs">Áreas Cerebrais</span>
+                      {index === 1 && (
+                        <div className="space-y-1.5 text-xs text-slate-700">
+                          <div className="grid grid-cols-2 gap-1.5 text-[11px]">
+                            <span className="p-1.5 bg-white rounded border border-slate-200 text-center font-semibold text-slate-800 shadow-2xs">Laringe & Cordas</span>
+                            <span className="p-1.5 bg-white rounded border border-slate-200 text-center font-semibold text-slate-800 shadow-2xs">Língua & Palato</span>
+                            <span className="p-1.5 bg-white rounded border border-slate-200 text-center font-semibold text-slate-800 shadow-2xs">Ouvido & Cóclea</span>
+                            <span className="p-1.5 bg-white rounded border border-slate-200 text-center font-semibold text-slate-800 shadow-2xs">Áreas Cerebrais</span>
+                          </div>
                         </div>
-                      </div>
-                    )}
+                      )}
 
-                    {index === 2 && (
-                      <div className="space-y-1.5 text-xs text-slate-700">
-                        <div className="p-1.5 bg-white rounded border border-slate-200 flex items-center justify-between text-[11px] shadow-2xs">
-                          <span className="text-rose-600 font-semibold">Fala</span>
-                          <span className="text-slate-400">×</span>
-                          <span className="text-teal-700 font-semibold">Linguagem</span>
+                      {index === 2 && (
+                        <div className="space-y-1.5 text-xs text-slate-700">
+                          <div className="p-1.5 bg-white rounded border border-slate-200 flex items-center justify-between text-[11px] shadow-2xs">
+                            <span className="text-rose-600 font-semibold">Fala</span>
+                            <span className="text-slate-400">×</span>
+                            <span className="text-teal-700 font-semibold">Linguagem</span>
+                          </div>
+                          <div className="p-1.5 bg-white rounded border border-slate-200 flex items-center justify-between text-[11px] shadow-2xs">
+                            <span className="text-rose-600 font-semibold">Fonética</span>
+                            <span className="text-slate-400">×</span>
+                            <span className="text-teal-700 font-semibold">Fonologia</span>
+                          </div>
+                          <div className="p-1.5 bg-white rounded border border-slate-200 flex items-center justify-between text-[11px] shadow-2xs">
+                            <span className="text-rose-600 font-semibold">Apraxia</span>
+                            <span className="text-slate-400">×</span>
+                            <span className="text-teal-700 font-semibold">Disartria</span>
+                          </div>
                         </div>
-                        <div className="p-1.5 bg-white rounded border border-slate-200 flex items-center justify-between text-[11px] shadow-2xs">
-                          <span className="text-rose-600 font-semibold">Fonética</span>
-                          <span className="text-slate-400">×</span>
-                          <span className="text-teal-700 font-semibold">Fonologia</span>
-                        </div>
-                        <div className="p-1.5 bg-white rounded border border-slate-200 flex items-center justify-between text-[11px] shadow-2xs">
-                          <span className="text-rose-600 font-semibold">Apraxia</span>
-                          <span className="text-slate-400">×</span>
-                          <span className="text-teal-700 font-semibold">Disartria</span>
-                        </div>
-                      </div>
-                    )}
-                  </div>
+                      )}
+                    </div>
+                  )}
 
                   <div>
                     <h3 className="text-lg font-bold text-slate-900 leading-snug">

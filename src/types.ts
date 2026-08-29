@@ -35,6 +35,8 @@ export interface BonusItem {
   tag: string;
   highlights: string[];
   badge: string;
+  imageUrl?: string;
+  fallbackUrl?: string;
 }
 
 export interface BenefitItem {
