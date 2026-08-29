@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { 
   CreditCard, 
   MailCheck, 
@@ -7,8 +7,6 @@ import {
   ChevronRight, 
   MousePointerClick,
   ShieldCheck,
-  Zap,
-  CheckCircle2,
   Sparkles,
 } from 'lucide-react';
 
@@ -25,15 +23,14 @@ interface PurchaseStep {
 
 export const PurchaseFlowCarousel: React.FC = () => {
   const [currentStep, setCurrentStep] = useState(0);
-  const [isAutoPlaying, setIsAutoPlaying] = useState(true);
 
   const steps: PurchaseStep[] = [
     {
       id: 'step-1',
       stepNumber: '01',
       shortLabel: 'Plano',
-      badge: 'ETAPA 01 • ESCOLHA',
-      title: 'Escolha o plano ideal para você',
+      badge: 'ETAPA 01 • ESCOLHA DO PLANO',
+      title: '1. Escolha o plano ideal para você',
       description: 'Clique no botão do Plano Essencial (R$ 10,00) ou no Plano Completo com Atlas e 3 Bônus Inclusos (R$ 27,90).',
       highlight: 'Pagamento único e sem mensalidades escondidas.',
       icon: <MousePointerClick className="w-5 h-5 text-teal-600" />,
@@ -42,8 +39,8 @@ export const PurchaseFlowCarousel: React.FC = () => {
       id: 'step-2',
       stepNumber: '02',
       shortLabel: 'Checkout',
-      badge: 'ETAPA 02 • SEGURANÇA',
-      title: 'Preencha seus dados com segurança',
+      badge: 'ETAPA 02 • SEGURANÇA TOTAL',
+      title: '2. Preencha seus dados com segurança',
       description: 'Informe seu nome e o e-mail onde deseja receber os materiais. A página é 100% criptografada e protegida.',
       highlight: 'Seus dados ficam protegidos com criptografia de ponta a ponta.',
       icon: <ShieldCheck className="w-5 h-5 text-teal-600" />,
@@ -52,8 +49,8 @@ export const PurchaseFlowCarousel: React.FC = () => {
       id: 'step-3',
       stepNumber: '03',
       shortLabel: 'Pagamento',
-      badge: 'ETAPA 03 • PAGAMENTO',
-      title: 'Confirme via PIX ou Cartão de Crédito',
+      badge: 'ETAPA 03 • PAGAMENTO INSTANTÂNEO',
+      title: '3. Confirme via PIX ou Cartão de Crédito',
       description: 'Pague via PIX para liberação instantânea no sistema ou parcele em até 3x no Cartão com total comodidade.',
       highlight: 'No PIX, a confirmação ocorre em menos de 1 minuto.',
       icon: <CreditCard className="w-5 h-5 text-teal-600" />,
@@ -62,8 +59,8 @@ export const PurchaseFlowCarousel: React.FC = () => {
       id: 'step-4',
       stepNumber: '04',
       shortLabel: 'E-mail',
-      badge: 'ETAPA 04 • ENVIO IMEDIATO',
-      title: 'Receba o acesso direto no seu e-mail',
+      badge: 'ETAPA 04 • ENVIO AUTOMÁTICO',
+      title: '4. Receba o acesso direto no seu e-mail',
       description: 'Assim que o pagamento é identificado, nossa plataforma envia automaticamente a mensagem com os links de acesso.',
       highlight: 'Basta abrir a caixa de entrada para encontrar seu material.',
       icon: <MailCheck className="w-5 h-5 text-teal-600" />,
@@ -73,94 +70,30 @@ export const PurchaseFlowCarousel: React.FC = () => {
       stepNumber: '05',
       shortLabel: 'Download',
       badge: 'ETAPA 05 • USO ILIMITADO',
-      title: 'Baixe os PDFs e use quando quiser',
+      title: '5. Baixe os PDFs e use quando quiser',
       description: 'Abra e salve todos os arquivos em PDF de alta resolução no seu celular, tablet ou computador para consultar e imprimir.',
       highlight: 'Acesso permanente para sempre aos seus arquivos digitais.',
       icon: <Download className="w-5 h-5 text-teal-600" />,
     },
   ];
 
-  // Auto-play timer with pause on user interaction
-  useEffect(() => {
-    if (!isAutoPlaying) return;
-    const timer = setInterval(() => {
-      setCurrentStep((prev) => (prev + 1) % steps.length);
-    }, 5500);
-    return () => clearInterval(timer);
-  }, [isAutoPlaying, steps.length]);
-
   const handlePrev = () => {
-    setIsAutoPlaying(false);
     setCurrentStep((prev) => (prev === 0 ? steps.length - 1 : prev - 1));
   };
 
   const handleNext = () => {
-    setIsAutoPlaying(false);
     setCurrentStep((prev) => (prev + 1) % steps.length);
   };
 
   const current = steps[currentStep];
 
   return (
-    <div 
-      className="mt-16 pt-10 border-t border-slate-200/90 max-w-3xl mx-auto px-4"
-      onMouseEnter={() => setIsAutoPlaying(false)}
-      onMouseLeave={() => setIsAutoPlaying(true)}
-    >
-      {/* Header Badge & Title */}
-      <div className="text-center mb-6 space-y-2">
-        <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-teal-50 border border-teal-200 text-teal-800 text-[11px] font-bold uppercase tracking-wider shadow-xs">
-          <Zap className="w-3.5 h-3.5 text-teal-600" />
-          <span>Fluxo Transparente e 100% Automático</span>
-        </div>
-        <h3 className="text-lg sm:text-xl font-extrabold text-slate-900 tracking-tight">
-          Como Funciona da Compra até a Entrega dos Materiais
-        </h3>
-        <p className="text-xs sm:text-sm text-slate-600 max-w-xl mx-auto">
-          Acompanhe as 5 etapas simples para ter os resumos e atlas no seu dispositivo:
-        </p>
-      </div>
-
-      {/* Interactive Step Progress Tabs (Desktop & Mobile) */}
-      <div className="grid grid-cols-5 gap-1.5 sm:gap-2 mb-4">
-        {steps.map((step, idx) => {
-          const isActive = currentStep === idx;
-          const isPassed = currentStep > idx;
-
-          return (
-            <button
-              key={`tab-${step.id}`}
-              onClick={() => {
-                setIsAutoPlaying(false);
-                setCurrentStep(idx);
-              }}
-              className={`p-2 sm:py-2.5 rounded-xl text-center transition-all cursor-pointer border flex flex-col items-center justify-center gap-1 ${
-                isActive
-                  ? 'bg-teal-50 border-2 border-teal-500 text-teal-900 shadow-sm font-extrabold'
-                  : isPassed
-                  ? 'bg-slate-50 border-slate-200 text-slate-700 hover:bg-slate-100'
-                  : 'bg-white border-slate-200 text-slate-400 hover:bg-slate-50'
-              }`}
-            >
-              <div className="flex items-center gap-1">
-                <span className={`text-[10px] font-mono font-bold ${isActive ? 'text-teal-700' : 'text-slate-400'}`}>
-                  {step.stepNumber}
-                </span>
-                {isPassed && <CheckCircle2 className="w-3 h-3 text-teal-600 shrink-0" />}
-              </div>
-              <span className="text-[10px] sm:text-[11px] font-bold truncate max-w-full">
-                {step.shortLabel}
-              </span>
-            </button>
-          );
-        })}
-      </div>
-
-      {/* Main Dynamic Step Showcase Card */}
-      <div className="relative bg-white border-2 border-teal-200/90 rounded-2xl p-5 sm:p-7 shadow-lg overflow-hidden">
+    <div className="mt-12 max-w-3xl mx-auto px-4">
+      {/* Main Step Showcase Card */}
+      <div className="relative bg-white border border-teal-200/90 rounded-2xl p-5 sm:p-7 shadow-md overflow-hidden">
         
         {/* Soft Ambient Corner Accent */}
-        <div className="absolute top-0 right-0 w-32 h-32 bg-teal-100/50 rounded-full blur-2xl pointer-events-none" />
+        <div className="absolute top-0 right-0 w-32 h-32 bg-teal-100/40 rounded-full blur-2xl pointer-events-none" />
         
         {/* Step Badge and Navigation Controls */}
         <div className="flex items-center justify-between gap-3 pb-4 border-b border-slate-100">
@@ -222,12 +155,14 @@ export const PurchaseFlowCarousel: React.FC = () => {
           </span>
           <div className="flex items-center gap-1.5">
             {steps.map((s, i) => (
-              <span
+              <button
                 key={`dot-${s.id}`}
-                className={`transition-all duration-300 rounded-full ${
+                onClick={() => setCurrentStep(i)}
+                aria-label={`Ir para etapa ${i + 1}`}
+                className={`transition-all duration-300 rounded-full cursor-pointer ${
                   currentStep === i 
                     ? 'w-5 h-1.5 bg-teal-600' 
-                    : 'w-1.5 h-1.5 bg-slate-200'
+                    : 'w-1.5 h-1.5 bg-slate-200 hover:bg-slate-300'
                 }`}
               />
             ))}
