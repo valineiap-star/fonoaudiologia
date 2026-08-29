@@ -94,13 +94,51 @@ export const PurchaseFlowCarousel: React.FC = () => {
         
         {/* Soft Ambient Corner Accent */}
         <div className="absolute top-0 right-0 w-32 h-32 bg-teal-100/40 rounded-full blur-2xl pointer-events-none" />
-        
-        {/* Step Badge and Navigation Controls */}
-        <div className="flex items-center justify-between gap-3 pb-4 border-b border-slate-100">
-          <div className="flex items-center gap-2">
-            <span className="px-2.5 py-1 rounded-md bg-teal-50 border border-teal-200 text-teal-800 text-[10px] sm:text-[11px] font-mono font-bold tracking-wider uppercase">
-              {current.badge}
-            </span>
+
+        {/* Step Content - Centered Icon & Text */}
+        <div className="pt-2 pb-2 flex flex-col items-center text-center space-y-3.5">
+          {/* Icon Box Centered */}
+          <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-teal-50 border border-teal-200 flex items-center justify-center shadow-xs text-teal-600">
+            {current.icon}
+          </div>
+
+          {/* Text and Highlights Centered */}
+          <div className="space-y-2 max-w-xl mx-auto">
+            <h4 className="text-base sm:text-lg font-extrabold text-slate-900 leading-snug">
+              {current.title}
+            </h4>
+            <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+              {current.description}
+            </p>
+            
+            {/* Reassurance pill centered */}
+            <div className="pt-2 flex justify-center">
+              <div className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg bg-teal-50 border border-teal-200 text-teal-800 text-[11px] font-semibold shadow-2xs">
+                <Sparkles className="w-3.5 h-3.5 text-teal-600 shrink-0" />
+                <span>{current.highlight}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Bottom Micro Timeline Indicators & Navigation */}
+        <div className="mt-5 pt-4 border-t border-slate-100 flex items-center justify-between text-[11px] text-slate-500">
+          <div className="flex items-center gap-2 font-medium">
+            <span>Passo {currentStep + 1} de {steps.length}</span>
+            <div className="flex items-center gap-1.5 ml-1">
+              {steps.map((s, i) => (
+                <button
+                  key={`dot-${s.id}`}
+                  onClick={() => setCurrentStep(i)}
+                  aria-label={`Ir para etapa ${i + 1}`}
+                  className={`transition-all duration-300 rounded-full cursor-pointer ${
+                    currentStep === i 
+                      ? 'w-5 h-1.5 bg-teal-600' 
+                      : 'w-1.5 h-1.5 bg-slate-200 hover:bg-slate-300'
+                  }`}
+                />
+              ))}
+            </div>
           </div>
 
           {/* Prev / Next Arrows */}
@@ -119,53 +157,6 @@ export const PurchaseFlowCarousel: React.FC = () => {
             >
               <ChevronRight className="w-4 h-4" />
             </button>
-          </div>
-        </div>
-
-        {/* Step Content */}
-        <div className="pt-4 flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6">
-          {/* Icon Box */}
-          <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-teal-50 border border-teal-200 flex items-center justify-center shrink-0 shadow-xs">
-            {current.icon}
-          </div>
-
-          {/* Text and Highlights */}
-          <div className="flex-1 space-y-2 min-w-0">
-            <h4 className="text-base sm:text-lg font-extrabold text-slate-900 leading-snug">
-              {current.title}
-            </h4>
-            <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-              {current.description}
-            </p>
-            
-            {/* Reassurance pill */}
-            <div className="pt-1.5">
-              <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-teal-50 border border-teal-200 text-teal-800 text-[11px] font-semibold">
-                <Sparkles className="w-3.5 h-3.5 text-teal-600 shrink-0" />
-                <span>{current.highlight}</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Bottom Micro Timeline Indicators */}
-        <div className="mt-5 pt-4 border-t border-slate-100 flex items-center justify-between text-[11px] text-slate-500">
-          <span className="flex items-center gap-1 font-medium">
-            <span>Passo {currentStep + 1} de {steps.length}</span>
-          </span>
-          <div className="flex items-center gap-1.5">
-            {steps.map((s, i) => (
-              <button
-                key={`dot-${s.id}`}
-                onClick={() => setCurrentStep(i)}
-                aria-label={`Ir para etapa ${i + 1}`}
-                className={`transition-all duration-300 rounded-full cursor-pointer ${
-                  currentStep === i 
-                    ? 'w-5 h-1.5 bg-teal-600' 
-                    : 'w-1.5 h-1.5 bg-slate-200 hover:bg-slate-300'
-                }`}
-              />
-            ))}
           </div>
         </div>
 

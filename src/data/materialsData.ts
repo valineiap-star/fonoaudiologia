@@ -385,7 +385,9 @@ export const BONUSES_DATA: BonusItem[] = [
       'Cérebro e Vias de Linguagem',
       'Músculos Orofaciais e da Mastigação'
     ],
-    badge: 'INCLUSO GRATUITAMENTE'
+    badge: 'INCLUSO GRATUITAMENTE',
+    imageUrl: '/bonus/bonus-2.png',
+    fallbackUrl: 'https://i.postimg.cc/MG7GYTBt/Chat-GPT-Image-29-de-ago-de-2026-00-22-49.png'
   },
   {
     id: 'bonus-03',
@@ -403,7 +405,9 @@ export const BONUSES_DATA: BonusItem[] = [
       'Palato Duro × Palato Mole',
       'Deglutição Típica × Disfagia'
     ],
-    badge: 'INCLUSO GRATUITAMENTE'
+    badge: 'INCLUSO GRATUITAMENTE',
+    imageUrl: '/bonus/bonus-3.png',
+    fallbackUrl: 'https://i.postimg.cc/XqGSQHhb/Chat-GPT-Image-29-de-ago-de-2026-00-23-35.png'
   }
 ];
 

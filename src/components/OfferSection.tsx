@@ -173,17 +173,18 @@ export const OfferSection: React.FC<OfferSectionProps> = ({ onGuaranteeClick, on
 
               {/* Action Button */}
               <div className="pt-2 space-y-2">
-                <button
-                  type="button"
-                  onClick={() => onOpenCheckout('essencial')}
-                  className="w-full py-4 px-6 bg-teal-700 hover:bg-teal-800 active:bg-teal-900 text-white font-extrabold text-sm rounded-xl shadow-lg transition-all flex items-center justify-center gap-2 cursor-pointer"
+                <a
+                  href="https://pay.wiapy.com/pq8eDC6y7VLk"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full py-4 px-6 bg-teal-700 hover:bg-teal-800 active:bg-teal-900 text-white font-extrabold text-sm rounded-xl shadow-lg transition-all flex items-center justify-center gap-2 cursor-pointer no-underline"
                   style={{ backgroundColor: '#0f766e', color: '#ffffff' }}
                 >
                   <Lock className="w-4 h-4 text-teal-200 shrink-0" />
                   <span className="text-white font-extrabold tracking-wide">
                     ESCOLHER PLANO ESSENCIAL (R$ 10,00)
                   </span>
-                </button>
+                </a>
                 <p className="text-[11px] text-center text-slate-500 font-medium">
                   Acesso imediato • Garantia incondicional de 7 dias
                 </p>
