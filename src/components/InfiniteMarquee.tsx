@@ -8,48 +8,11 @@ interface InfiniteMarqueeProps {
 export const InfiniteMarquee: React.FC<InfiniteMarqueeProps> = ({ onCtaClick }) => {
   const [selectedImage, setSelectedImage] = useState<{ url: string; title: string } | null>(null);
 
-  const galleryImages = [
-    {
-      id: 'img-1',
-      url: 'https://i.postimg.cc/HsGHxmRR/Chat-GPT-Image-27-de-ago-de-2026-18-26-16-(5).png',
-      title: 'Anatomia da Laringe & Pregas Vocais',
-    },
-    {
-      id: 'img-2',
-      url: 'https://i.postimg.cc/15pSVT1M/Chat-GPT-Image-27-de-ago-de-2026-18-26-16-(6).png',
-      title: 'Esquema Anatômico da Audição',
-    },
-    {
-      id: 'img-3',
-      url: 'https://i.postimg.cc/9FG2wSHJ/Chat-GPT-Image-27-de-ago-de-2026-18-26-16-(7).png',
-      title: 'Neuroanatomia & Linguagem',
-    },
-    {
-      id: 'img-4',
-      url: 'https://i.postimg.cc/GhkRTNnM/Chat-GPT-Image-27-de-ago-de-2026-18-26-16-(8).png',
-      title: 'Fases da Deglutição & Disfagia',
-    },
-    {
-      id: 'img-5',
-      url: 'https://i.postimg.cc/kXr94CzZ/Chat-GPT-Image-27-de-ago-de-2026-18-35-19-(5).png',
-      title: 'Músculos da Mímica & Mastigação',
-    },
-    {
-      id: 'img-6',
-      url: 'https://i.postimg.cc/wTKHvzZr/Chat-GPT-Image-27-de-ago-de-2026-18-35-19-(6).png',
-      title: 'Pares Cranianos da Fonoaudiologia',
-    },
-    {
-      id: 'img-7',
-      url: 'https://i.postimg.cc/7YvD64dW/Chat-GPT-Image-27-de-ago-de-2026-18-35-20-(10).png',
-      title: 'Resumo Visual de Consulta Rápida',
-    },
-    {
-      id: 'img-8',
-      url: 'https://i.postimg.cc/J4wmn8vP/Chat-GPT-Image-27-de-ago-de-2026-18-35-20-(9).png',
-      title: 'Mapa Mental & Fluxograma Diagnóstico',
-    },
-  ];
+  const galleryImages: { id: string; url: string; title: string }[] = [];
+
+  if (galleryImages.length === 0) {
+    return null;
+  }
 
   // Duplicate for seamless infinite loop
   const displayImages = [...galleryImages, ...galleryImages];

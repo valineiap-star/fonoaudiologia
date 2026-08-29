@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { TopBanner } from './components/TopBanner';
 import { HeroSection } from './components/HeroSection';
-import { InfiniteMarquee } from './components/InfiniteMarquee';
+import { MaterialsShowcaseSection } from './components/MaterialsShowcaseSection';
 import { WhyChooseSection } from './components/WhyChooseSection';
 import { BonusSection } from './components/BonusSection';
 import { InsideLookSection } from './components/InsideLookSection';
@@ -56,8 +56,8 @@ export default function App() {
           onPreviewSheet={handlePreviewSheetById}
         />
 
-        {/* CARROSSEL INFINITO DE TÓPICOS E MATERIAIS */}
-        <InfiniteMarquee onCtaClick={scrollToOffer} />
+        {/* SEÇÃO DE MATERIAIS POR DENTRO COM DOIS CARROSSEIS INFINITOS */}
+        <MaterialsShowcaseSection onCtaClick={scrollToOffer} />
 
         {/* SEÇÃO 03 — POR QUE ESCOLHER O FONO VISUAL? (BENEFÍCIOS + COMPARAÇÃO) */}
         <WhyChooseSection onCtaClick={scrollToOffer} />
