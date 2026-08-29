@@ -38,6 +38,40 @@
       rel="stylesheet"
     >
 
+    <!-- Circular Structure Protection for Tracking & Analytics -->
+    <script>
+      (function() {
+        var _origStringify = JSON.stringify;
+        JSON.stringify = function(val, replacer, space) {
+          var seen = new WeakSet();
+          var safeReplacer = function(key, value) {
+            if (typeof value === 'object' && value !== null) {
+              if (value instanceof Element || value instanceof Node || (value.nodeType && value.nodeName)) {
+                return '[Element: ' + (value.nodeName || 'DOM') + ']';
+              }
+              if (seen.has(value)) {
+                return '[Circular]';
+              }
+              seen.add(value);
+            }
+            if (typeof replacer === 'function') {
+              return replacer(key, value);
+            }
+            return value;
+          };
+          try {
+            return _origStringify(val, typeof replacer === 'function' ? safeReplacer : (replacer || safeReplacer), space);
+          } catch (e) {
+            try {
+              return _origStringify(val, safeReplacer, space);
+            } catch (err) {
+              return '{}';
+            }
+          }
+        };
+      })();
+    </script>
+
     <!-- META PIXEL / UTMIFY -->
     <script>
       (function(){

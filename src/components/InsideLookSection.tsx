@@ -180,7 +180,7 @@ export const InsideLookSection: React.FC<InsideLookSectionProps> = ({ onSelectSh
 
           <div className="pt-2">
             <button
-              onClick={onCtaClick}
+              onClick={() => onCtaClick()}
               className="px-8 py-3.5 bg-[#0B2533] hover:bg-teal-700 text-white font-bold text-sm rounded-xl shadow-md transition-all cursor-pointer inline-flex items-center gap-2"
             >
               <span>QUERO ACESSAR O FONO VISUAL</span>

@@ -55,7 +55,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onCtaClick }) => {
         {/* Primary CTA Area */}
         <div className="pt-2 flex flex-col items-center space-y-3 w-full">
           <button
-            onClick={onCtaClick}
+            onClick={() => onCtaClick()}
             className="w-full sm:w-auto px-10 py-4 bg-teal-600 hover:bg-teal-700 active:bg-teal-800 text-white font-extrabold text-base rounded-xl shadow-xl shadow-teal-700/25 hover:shadow-2xl transition-all transform hover:-translate-y-0.5 flex items-center justify-center gap-3 cursor-pointer group"
           >
             <span>QUERO ACESSAR O FONO VISUAL</span>

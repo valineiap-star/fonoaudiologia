@@ -144,7 +144,7 @@ export const BonusSection: React.FC<BonusSectionProps> = ({ onCtaClick, onPrevie
         {/* Bonus CTA */}
         <div className="mt-12 text-center">
           <button
-            onClick={onCtaClick}
+            onClick={() => onCtaClick()}
             className="px-8 py-4 bg-teal-600 hover:bg-teal-700 text-white font-bold text-base rounded-xl shadow-lg shadow-teal-700/20 hover:shadow-xl transition-all cursor-pointer inline-flex items-center gap-2"
           >
             <span>QUERO ACESSAR O FONO VISUAL COM TODOS OS BÔNUS</span>

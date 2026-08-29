@@ -23,7 +23,7 @@ export const TopBanner: React.FC<TopBannerProps> = ({ onCtaClick }) => {
 
         {onCtaClick && (
           <button
-            onClick={onCtaClick}
+            onClick={() => onCtaClick()}
             className="hidden sm:inline-flex items-center gap-1 text-teal-300 hover:text-white font-bold ml-2 underline underline-offset-4 decoration-teal-400 hover:decoration-white transition-colors cursor-pointer text-xs"
           >
             Garantir com Desconto

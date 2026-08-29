@@ -84,7 +84,7 @@ export const FaqSection: React.FC<FaqSectionProps> = ({ onCtaClick }) => {
             Acesso liberado imediatamente após a confirmação do pagamento.
           </p>
           <button
-            onClick={onCtaClick}
+            onClick={() => onCtaClick()}
             className="px-6 py-3 bg-[#0B2533] hover:bg-teal-700 text-white font-bold text-xs sm:text-sm rounded-xl shadow-sm transition-all cursor-pointer inline-flex items-center gap-2"
           >
             <span>QUERO ACESSAR O FONO VISUAL</span>
