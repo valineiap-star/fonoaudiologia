@@ -1,0 +1,6 @@
+{
+  "name": "Fono Visual — Atlas Visual de Fonoaudiologia",
+  "description": "Biblioteca visual completa de materiais em PDF com mapas anatômicos, esquemas, fluxogramas e resumos para estudantes e profissionais de Fonoaudiologia.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

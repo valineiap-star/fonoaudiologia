@@ -1,0 +1,60 @@
+@import "tailwindcss";
+
+@layer base {
+  * {
+    font-family: 'Poppins', system-ui, -apple-system, sans-serif;
+  }
+
+  body {
+    font-family: 'Poppins', system-ui, -apple-system, sans-serif;
+    font-weight: 400;
+    color: #1e293b;
+    background-color: #FAFBFD;
+    overflow-x: hidden;
+  }
+
+  p, span, li, a, input, textarea, button {
+    font-family: 'Poppins', system-ui, -apple-system, sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6, strong, b, .font-bold, .font-extrabold, .font-black {
+    font-family: 'Poppins', system-ui, -apple-system, sans-serif;
+    font-weight: 700;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+@keyframes pulse-subtle {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.96; transform: scale(1.02); }
+}
+
+.animate-pulse-subtle {
+  animation: pulse-subtle 3s ease-in-out infinite;
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-infinite-marquee {
+  animation: marquee 32s linear infinite;
+  will-change: transform;
+}
+
