@@ -2,7 +2,7 @@ import React from 'react';
 import { 
   Check, ShieldCheck, Zap, Lock, Sparkles, 
   ArrowRight, X as XIcon, Star, Tag, CreditCard,
-  Flame
+  Flame, Gift, CheckCircle2
 } from 'lucide-react';
 import { PurchaseFlowCarousel } from './PurchaseFlowCarousel';
 
@@ -150,11 +150,11 @@ export const OfferSection: React.FC<OfferSectionProps> = ({ onGuaranteeClick, on
                     </div>
                     <span>Download em PDF para celular, tablet e computador</span>
                   </li>
-                  <li className="flex items-start gap-2.5">
-                    <div className="w-4 h-4 rounded-full bg-teal-100 text-teal-700 flex items-center justify-center shrink-0 mt-0.5 border border-teal-200">
-                      <Check className="w-3 h-3 stroke-[3]" />
+                  <li className="flex items-start gap-2.5 text-slate-400">
+                    <div className="w-4 h-4 rounded-full bg-slate-100 text-slate-400 flex items-center justify-center shrink-0 mt-0.5 border border-slate-200">
+                      <XIcon className="w-3 h-3 stroke-[2.5]" />
                     </div>
-                    <span><strong>Bônus:</strong> 30 Termos da Fono Descomplicados</span>
+                    <span className="line-through">Sem os 3 Bônus Exclusivos (apenas no Completo)</span>
                   </li>
                   <li className="flex items-start gap-2.5 text-slate-400">
                     <div className="w-4 h-4 rounded-full bg-slate-100 text-slate-400 flex items-center justify-center shrink-0 mt-0.5 border border-slate-200">
@@ -166,7 +166,7 @@ export const OfferSection: React.FC<OfferSectionProps> = ({ onGuaranteeClick, on
                     <div className="w-4 h-4 rounded-full bg-slate-100 text-slate-400 flex items-center justify-center shrink-0 mt-0.5 border border-slate-200">
                       <XIcon className="w-3 h-3 stroke-[2.5]" />
                     </div>
-                    <span className="line-through">Sem as 20 Pranchas Anatômicas Avançadas</span>
+                    <span className="line-through">Sem o Atlas de 20 Pranchas e 20 Comparativos</span>
                   </li>
                 </ul>
               </div>
@@ -291,14 +291,29 @@ export const OfferSection: React.FC<OfferSectionProps> = ({ onGuaranteeClick, on
                   </li>
                   
                   {/* Free Bonuses Box */}
-                  <li className="p-3.5 bg-purple-50 rounded-2xl border border-purple-200 text-xs text-purple-900 space-y-1.5 mt-2">
-                    <div className="font-bold text-purple-900 flex items-center gap-1.5">
-                      <span>🎁 3 Bônus Especiais Inclusos Grátis:</span>
+                  <li className="p-4 bg-purple-50/90 rounded-2xl border border-purple-200/90 text-xs text-purple-950 space-y-2.5 mt-3 shadow-xs">
+                    <div className="font-extrabold text-purple-900 flex items-center justify-between text-xs">
+                      <span className="flex items-center gap-1.5">
+                        <Gift className="w-4 h-4 text-purple-600 shrink-0" />
+                        <span>3 Bônus Especiais Inclusos Grátis:</span>
+                      </span>
+                      <span className="text-[10px] uppercase font-bold bg-purple-200/70 text-purple-800 px-2 py-0.5 rounded-md">
+                        Economize R$ 141
+                      </span>
                     </div>
-                    <div className="space-y-1 text-[11px] text-purple-800/95 pl-1 font-medium">
-                      <div>✓ Bônus 01: 30 Termos da Fono Descomplicados</div>
-                      <div>✓ Bônus 02: Atlas de Anatomias Essenciais (20 pranchas)</div>
-                      <div>✓ Bônus 03: 20 Comparativos Fonoaudiológicos</div>
+                    <div className="space-y-1.5 text-[11px] text-purple-900 font-medium pt-1 border-t border-purple-200/60">
+                      <div className="flex items-start gap-1.5">
+                        <CheckCircle2 className="w-3.5 h-3.5 text-purple-700 shrink-0 mt-0.5" />
+                        <span><strong>Bônus 01:</strong> 30 Termos da Fono Descomplicados (Glossário Visual)</span>
+                      </div>
+                      <div className="flex items-start gap-1.5">
+                        <CheckCircle2 className="w-3.5 h-3.5 text-purple-700 shrink-0 mt-0.5" />
+                        <span><strong>Bônus 02:</strong> Atlas de Anatomias Essenciais (20 Pranchas em Alta Resolução)</span>
+                      </div>
+                      <div className="flex items-start gap-1.5">
+                        <CheckCircle2 className="w-3.5 h-3.5 text-purple-700 shrink-0 mt-0.5" />
+                        <span><strong>Bônus 03:</strong> 20 Comparativos Fonoaudiológicos (Diferenciação Clínica)</span>
+                      </div>
                     </div>
                   </li>
                 </ul>
