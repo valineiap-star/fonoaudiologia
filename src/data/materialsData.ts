@@ -451,7 +451,7 @@ export const FAQ_DATA: FaqItem[] = [
   {
     id: 'faq-01',
     question: 'Como receberei o Fono Visual?',
-    answer: 'Após a confirmação do pagamento, você receberá acesso imediato aos materiais digitais disponibilizados na área de membros/plataforma de entrega através do seu e-mail cadastrado.'
+    answer: 'Após a confirmação do pagamento, você receberá o link de acesso imediato diretamente no seu e-mail e também pelo WhatsApp cadastrado na compra. A liberação é automática e instantânea no PIX e Cartão.'
   },
   {
     id: 'faq-02',

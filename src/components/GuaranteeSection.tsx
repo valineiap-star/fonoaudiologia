@@ -43,7 +43,7 @@ export const GuaranteeSection: React.FC<GuaranteeSectionProps> = ({ onCtaClick }
               </span>
               <span className="flex items-center gap-1.5">
                 <RefreshCw className="w-4 h-4 text-teal-600" />
-                Acesso direto pelo e-mail
+                Envio imediato no E-mail e WhatsApp
               </span>
             </div>
           </div>

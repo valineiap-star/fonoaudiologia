@@ -10,7 +10,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onCtaClick }) => {
   const highlights = [
     'Conteúdo visual e organizado',
     'Diversas áreas da Fonoaudiologia',
-    'Acesso digital imediato',
+    'Envio imediato no E-mail e WhatsApp',
     'Consulte pelo celular, tablet ou computador'
   ];
 
@@ -77,7 +77,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onCtaClick }) => {
           
           <p className="text-xs text-slate-500 font-medium flex items-center justify-center gap-1.5">
             <Zap className="w-3.5 h-3.5 text-teal-600" />
-            Acesso imediato após a confirmação do pagamento.
+            Envio imediato no seu E-mail e WhatsApp após a confirmação.
           </p>
         </div>
 

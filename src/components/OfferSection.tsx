@@ -60,7 +60,7 @@ export const OfferSection: React.FC<OfferSectionProps> = ({ onGuaranteeClick, on
           </h2>
 
           <p className="text-sm sm:text-base text-slate-600">
-            Selecione a melhor opção para a sua rotina de estudos e garanta acesso digital imediato.
+            Selecione a melhor opção para a sua rotina de estudos e receba o acesso imediato no seu <strong>E-mail</strong> e <strong>WhatsApp</strong>.
           </p>
         </div>
 
@@ -186,7 +186,7 @@ export const OfferSection: React.FC<OfferSectionProps> = ({ onGuaranteeClick, on
                   </span>
                 </a>
                 <p className="text-[11px] text-center text-slate-500 font-medium">
-                  Acesso imediato • Garantia incondicional de 7 dias
+                  Envio imediato no E-mail e WhatsApp • Garantia de 7 dias
                 </p>
               </div>
 
@@ -335,7 +335,7 @@ export const OfferSection: React.FC<OfferSectionProps> = ({ onGuaranteeClick, on
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform text-white" />
                 </a>
                 <p className="text-[11px] text-center text-slate-500 font-medium">
-                  Acesso vitalício • 7 dias de garantia incondicional
+                  Envio imediato no E-mail e WhatsApp • Acesso vitalício
                 </p>
               </div>
 
@@ -353,7 +353,7 @@ export const OfferSection: React.FC<OfferSectionProps> = ({ onGuaranteeClick, on
           <span>•</span>
           <span className="flex items-center gap-1 font-medium">
             <Zap className="w-4 h-4 text-teal-600" />
-            Acesso digital imediato
+            Envio imediato no E-mail e WhatsApp
           </span>
           <span>•</span>
           <span 

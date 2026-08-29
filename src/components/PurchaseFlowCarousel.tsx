@@ -1,11 +1,11 @@
-import React, { useRef, useState, useEffect } from 'react';
+import React, { useRef, useState } from 'react';
 import { 
   CreditCard, 
-  MailCheck, 
   Download, 
   MousePointerClick,
   ShieldCheck,
   Sparkles,
+  SendHorizontal
 } from 'lucide-react';
 
 interface PurchaseStep {
@@ -40,7 +40,7 @@ export const PurchaseFlowCarousel: React.FC = () => {
       shortLabel: 'Checkout',
       badge: 'ETAPA 02',
       title: '2. Preencha seus dados com segurança',
-      description: 'Informe seu nome e o e-mail onde deseja receber os materiais. A página é 100% criptografada e protegida.',
+      description: 'Informe seu nome, e-mail e número de WhatsApp. O ambiente de pagamento é 100% blindado e seguro.',
       highlight: 'Criptografia e proteção total de dados.',
       icon: <ShieldCheck className="w-5 h-5 text-teal-600" />,
     },
@@ -57,12 +57,12 @@ export const PurchaseFlowCarousel: React.FC = () => {
     {
       id: 'step-4',
       stepNumber: '04',
-      shortLabel: 'E-mail',
+      shortLabel: 'Entrega Imediata',
       badge: 'ETAPA 04',
-      title: '4. Receba o acesso no seu e-mail',
-      description: 'Assim que o pagamento é aprovado, nossa plataforma envia automaticamente a mensagem com os links de acesso.',
-      highlight: 'Envio imediato na sua caixa de entrada.',
-      icon: <MailCheck className="w-5 h-5 text-teal-600" />,
+      title: '4. Receba no E-mail e no WhatsApp',
+      description: 'Assim que o pagamento é confirmado, você recebe o link de acesso imediato diretamente no seu E-mail e também pelo WhatsApp.',
+      highlight: 'Envio automático e instantâneo nos dois canais.',
+      icon: <SendHorizontal className="w-5 h-5 text-teal-600" />,
     },
     {
       id: 'step-5',
