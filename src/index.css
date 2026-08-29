@@ -68,3 +68,17 @@
   will-change: transform;
 }
 
+@keyframes float-loop {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-12px) rotate(0.4deg);
+  }
+}
+
+.animate-float-loop {
+  animation: float-loop 4.5s ease-in-out infinite;
+  will-change: transform;
+}
+

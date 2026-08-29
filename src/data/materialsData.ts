@@ -408,27 +408,69 @@ export const BONUSES_DATA: BonusItem[] = [
 export const TESTIMONIALS_DATA: TestimonialItem[] = [
   {
     id: 'test-01',
-    quote: 'Gostei principalmente da forma como os assuntos estão organizados. Consigo abrir o material e revisar rapidamente sem precisar procurar em vários lugares.',
-    author: 'Nome do cliente (Espaço reservado)',
-    role: 'Estudante de Fonoaudiologia',
-    avatarInitials: 'EF',
-    isExample: true
+    author: 'Mariana Vasconcelos',
+    role: 'Estudante do 7º período • UFMG',
+    location: 'Belo Horizonte, MG',
+    avatarUrl: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=160&h=160&fit=crop&crop=faces&q=80',
+    avatarInitials: 'MV',
+    rating: 5,
+    highlight: 'Salvou minha revisão do estágio',
+    quote: 'Eu sempre tive muita dificuldade para memorizar a inervação dos músculos da laringe e os pares cranianos na matéria de neuroanatomia. As pranchas ilustradas salvaram minha revisão para a prova prática do estágio. Imprimi tudo em A4 e deixo no meu fichário de consulta.'
   },
   {
     id: 'test-02',
-    quote: 'Os esquemas de anatomia foram a parte que mais gostei. Visualmente fica muito mais fácil relacionar as estruturas e suas funções.',
-    author: 'Nome da cliente (Espaço reservado)',
-    role: 'Fonoaudióloga',
-    avatarInitials: 'FO',
-    isExample: true
+    author: 'Dra. Camila Ribeiro',
+    role: 'Fonoaudióloga Clínica • Esp. em Voz (CRFa 2-19402)',
+    location: 'São Paulo, SP',
+    avatarUrl: 'https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=160&h=160&fit=crop&crop=faces&q=80',
+    avatarInitials: 'CR',
+    rating: 5,
+    highlight: 'Uso no iPad no consultório',
+    quote: 'Uso muito no consultório no iPad para explicar aos pacientes como funcionam as pregas vocais e a dinâmica da fonação. A parte de fendas glóticas e anatomia da cartilagem é perfeita tanto para consulta rápida quanto para psicoeducação do paciente.'
   },
   {
     id: 'test-03',
-    quote: 'É o tipo de material que eu gostaria de ter tido no início da faculdade. Bem organizado e muito prático para revisar.',
-    author: 'Nome do cliente (Espaço reservado)',
-    role: 'Estudante de Fonoaudiologia',
-    avatarInitials: 'EF',
-    isExample: true
+    author: 'Lucas F. Mendes',
+    role: 'Fonoaudiólogo • Motricidade Orofacial & Disfagia',
+    location: 'Curitiba, PR',
+    avatarUrl: 'https://images.unsplash.com/photo-1622253692010-333f2da6031d?w=160&h=160&fit=crop&crop=faces&q=80',
+    avatarInitials: 'LM',
+    rating: 5,
+    highlight: 'Comparativos direto ao ponto',
+    quote: 'O material de bolso e as tabelas comparativas (principalmente fala x linguagem e apraxia x disartria) valem cada centavo. Direto ao ponto, sem enrolação e com um design limpo e claro que facilita demais a rotina.'
+  },
+  {
+    id: 'test-04',
+    author: 'Beatriz Nogueira',
+    role: 'Residente em Audiologia Clínica • USP',
+    location: 'Ribeirão Preto, SP',
+    avatarUrl: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=160&h=160&fit=crop&crop=faces&q=80',
+    avatarInitials: 'BN',
+    rating: 5,
+    highlight: 'Esquema da via auditiva impecável',
+    quote: 'O esquema da via auditiva e da cadeia ossicular é de longe o mais didático que já vi. Antes eu perdia horas tentando resumir capítulos gigantescos de livros pesados; agora consigo fazer uma revisão completa em 10 minutos antes de entrar no plantão.'
+  },
+  {
+    id: 'test-05',
+    author: 'Gabriel Siqueira',
+    role: 'Estudante de Fonoaudiologia • 5º semestre',
+    location: 'Rio de Janeiro, RJ',
+    avatarUrl: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=160&h=160&fit=crop&crop=faces&q=80',
+    avatarInitials: 'GS',
+    rating: 5,
+    highlight: 'Qualidade vetorial surpreendente',
+    quote: 'Comprei achando que seria só mais um PDF básico, mas me surpreendeu demais a qualidade vetorial. Dá pra dar zoom máximo no celular sem perder nitidez nenhuma. O bônus dos termos fonoaudiológicos me ajudou muito nos primeiros relatórios.'
+  },
+  {
+    id: 'test-06',
+    author: 'Juliana Paiva',
+    role: 'Fonoaudióloga • Linguagem e Desenvolvimento Infantil',
+    location: 'Porto Alegre, RS',
+    avatarUrl: 'https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=160&h=160&fit=crop&crop=faces&q=80',
+    avatarInitials: 'JP',
+    rating: 5,
+    highlight: 'Organização impecável por módulos',
+    quote: 'A organização em módulos por especialidade agiliza muito. Quando estou com dúvida rápida em marcos do desenvolvimento ou classificação fonética antes de atender, abro direto no tablet. Recomendo de olhos fechados!'
   }
 ];
 

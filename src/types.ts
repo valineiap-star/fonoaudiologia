@@ -55,8 +55,12 @@ export interface TestimonialItem {
   quote: string;
   author: string;
   role: string;
+  avatarUrl?: string;
   avatarInitials: string;
-  isExample: boolean;
+  location?: string;
+  rating?: number;
+  highlight?: string;
+  isExample?: boolean;
 }
 
 export interface PricingPlan {

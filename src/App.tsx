@@ -4,6 +4,7 @@ import { HeroSection } from './components/HeroSection';
 import { MaterialsShowcaseSection } from './components/MaterialsShowcaseSection';
 import { WhyChooseSection } from './components/WhyChooseSection';
 import { BonusSection } from './components/BonusSection';
+import { InfiniteMarquee } from './components/InfiniteMarquee';
 import { OfferSection } from './components/OfferSection';
 import { TestimonialsSection } from './components/TestimonialsSection';
 import { GuaranteeSection } from './components/GuaranteeSection';
@@ -66,6 +67,9 @@ export default function App() {
           onCtaClick={scrollToOffer}
           onPreviewSheet={handlePreviewSheetById}
         />
+
+        {/* CARROSSEL INFINITO DE PRANCHAS E MATERIAIS */}
+        <InfiniteMarquee onCtaClick={scrollToOffer} />
 
         {/* SEÇÃO 05 — OFERTA DE ALTA CONVERSÃO */}
         <OfferSection

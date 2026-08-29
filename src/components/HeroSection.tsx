@@ -38,14 +38,14 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onCtaClick }) => {
           Tenha em mãos mapas, esquemas anatômicos, comparativos e resumos visuais para estudar, revisar e consultar os principais conteúdos da Fonoaudiologia com muito mais clareza.
         </p>
 
-        {/* Hero Mockup without background directly below headline */}
+        {/* Hero Mockup with smooth floating loop animation */}
         <div className="w-full max-w-2xl mx-auto my-2 flex items-center justify-center relative">
-          <div className="absolute inset-0 bg-teal-100/40 rounded-full blur-3xl -z-10 transform scale-90" />
+          <div className="absolute inset-0 bg-teal-200/30 rounded-full blur-3xl -z-10 transform scale-95 animate-pulse-subtle" />
           <img
             src="/hero-mockup.png"
             alt="Materiais Fonoaudiologia Visual - Mockup Digital"
             referrerPolicy="no-referrer"
-            className="w-full h-auto max-h-[460px] object-contain drop-shadow-xl select-none"
+            className="w-full h-auto max-h-[460px] object-contain drop-shadow-2xl select-none animate-float-loop transition-transform"
           />
         </div>
 
