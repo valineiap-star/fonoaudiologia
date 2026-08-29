@@ -152,11 +152,11 @@ export const MaterialsShowcaseSection: React.FC<MaterialsShowcaseSectionProps> =
       <div className="mt-10 sm:mt-12 text-center relative z-10 px-4">
         <button
           onClick={() => onCtaClick()}
-          className="w-full sm:w-auto px-8 py-4 bg-[#0B2533] hover:bg-teal-700 text-white font-extrabold text-sm sm:text-base rounded-xl shadow-lg shadow-slate-900/10 hover:shadow-xl transition-all inline-flex items-center justify-center gap-2.5 cursor-pointer group"
+          className="w-full sm:w-auto px-8 py-4 bg-teal-600 hover:bg-teal-700 text-white font-extrabold text-sm sm:text-base rounded-xl shadow-lg shadow-teal-700/20 hover:shadow-xl transition-all inline-flex items-center justify-center gap-2.5 cursor-pointer group"
         >
-          <Sparkles className="w-4 h-4 text-teal-300" />
+          <Sparkles className="w-4 h-4 text-teal-200" />
           <span>QUERO ACESSAR TODAS AS PRANCHAS ILUSTRADAS</span>
-          <ArrowRight className="w-4 h-4 text-teal-300 group-hover:translate-x-1 transition-transform" />
+          <ArrowRight className="w-4 h-4 text-teal-200 group-hover:translate-x-1 transition-transform" />
         </button>
       </div>
 

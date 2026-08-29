@@ -44,19 +44,19 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({ isOpen, onClose, i
         onClick={(e) => e.stopPropagation()}
       >
         {/* Header */}
-        <div className="bg-[#0B2533] text-white px-6 py-4 flex items-center justify-between shrink-0">
+        <div className="bg-gradient-to-r from-teal-700 to-teal-800 text-white px-6 py-4 flex items-center justify-between shrink-0">
           <div className="flex items-center gap-2.5">
-            <div className="w-8 h-8 rounded-lg bg-teal-500/20 border border-teal-400/40 flex items-center justify-center text-teal-300 font-bold text-sm">
+            <div className="w-8 h-8 rounded-lg bg-white/20 border border-white/30 flex items-center justify-center text-white font-bold text-sm">
               FV
             </div>
             <div>
               <h3 className="text-base font-bold leading-tight">Checkout Seguro</h3>
-              <p className="text-xs text-teal-300">FONO VISUAL — Atlas Visual de Fonoaudiologia</p>
+              <p className="text-xs text-teal-200">FONO VISUAL — Atlas Visual de Fonoaudiologia</p>
             </div>
           </div>
           <button 
             onClick={onClose}
-            className="text-slate-300 hover:text-white p-1 rounded-lg hover:bg-white/10 transition-colors cursor-pointer"
+            className="text-white/80 hover:text-white p-1 rounded-lg hover:bg-white/10 transition-colors cursor-pointer"
           >
             <X className="w-5 h-5" />
           </button>

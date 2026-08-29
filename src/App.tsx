@@ -4,7 +4,6 @@ import { HeroSection } from './components/HeroSection';
 import { MaterialsShowcaseSection } from './components/MaterialsShowcaseSection';
 import { WhyChooseSection } from './components/WhyChooseSection';
 import { BonusSection } from './components/BonusSection';
-import { InsideLookSection } from './components/InsideLookSection';
 import { OfferSection } from './components/OfferSection';
 import { TestimonialsSection } from './components/TestimonialsSection';
 import { GuaranteeSection } from './components/GuaranteeSection';
@@ -66,12 +65,6 @@ export default function App() {
         <BonusSection
           onCtaClick={scrollToOffer}
           onPreviewSheet={handlePreviewSheetById}
-        />
-
-        {/* SEÇÃO 06 — VEJA POR DENTRO (GALERIA INTERATIVA DE PRANCHAS) */}
-        <InsideLookSection
-          onSelectSheet={(sheet) => setSelectedSheet(sheet)}
-          onCtaClick={scrollToOffer}
         />
 
         {/* SEÇÃO 05 — OFERTA DE ALTA CONVERSÃO */}

@@ -9,7 +9,7 @@ interface BonusSectionProps {
 
 export const BonusSection: React.FC<BonusSectionProps> = ({ onCtaClick, onPreviewSheet }) => {
   return (
-    <section id="bonus" className="py-20 bg-gradient-to-b from-[#FAFBFD] via-[#F4F8FA] to-[#FAFBFD] border-b border-slate-200/60 relative">
+    <section id="bonus" className="py-20 bg-gradient-to-b from-white via-teal-50/20 to-white border-b border-slate-200/60 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header */}
@@ -37,66 +37,66 @@ export const BonusSection: React.FC<BonusSectionProps> = ({ onCtaClick, onPrevie
                 className="bg-white rounded-2xl border border-slate-200 shadow-md hover:shadow-xl transition-all flex flex-col justify-between overflow-hidden relative group"
               >
                 {/* Top Badge: INCLUSO GRATUITAMENTE */}
-                <div className="bg-[#0B2533] text-white px-5 py-3 flex items-center justify-between">
-                  <span className="text-xs font-black tracking-wider text-teal-300 font-mono">
+                <div className="bg-gradient-to-r from-teal-600 to-teal-700 text-white px-5 py-3 flex items-center justify-between">
+                  <span className="text-xs font-black tracking-wider text-teal-100 font-mono">
                     {bonus.number}
                   </span>
-                  <span className="text-[11px] font-bold bg-teal-500/20 text-teal-300 px-2.5 py-0.5 rounded-full border border-teal-400/40">
+                  <span className="text-[11px] font-bold bg-white/20 text-white px-2.5 py-0.5 rounded-full border border-white/30">
                     {bonus.badge}
                   </span>
                 </div>
 
                 <div className="p-6 flex-1 space-y-4">
-                  {/* Visual mockup card inside bonus */}
-                  <div className="p-4 rounded-xl bg-gradient-to-br from-slate-900 to-[#0e3b4d] text-white shadow-inner relative overflow-hidden border border-slate-800">
-                    <div className="flex items-center justify-between text-[11px] text-teal-300 font-semibold mb-2">
+                  {/* Visual mockup card inside bonus - Light modern theme */}
+                  <div className="p-4 rounded-xl bg-gradient-to-br from-teal-50/90 to-slate-100 text-slate-800 shadow-inner relative overflow-hidden border border-teal-100">
+                    <div className="flex items-center justify-between text-[11px] text-teal-700 font-bold mb-2">
                       <span className="flex items-center gap-1">
-                        <Sparkles className="w-3.5 h-3.5" />
+                        <Sparkles className="w-3.5 h-3.5 text-teal-600" />
                         {bonus.tag}
                       </span>
-                      <span>PDF Digital</span>
+                      <span className="px-2 py-0.5 bg-white rounded-md border border-slate-200 text-slate-600">PDF Digital</span>
                     </div>
                     
                     {index === 0 && (
-                      <div className="space-y-1.5 text-xs text-slate-200">
-                        <div className="p-2 bg-slate-800/80 rounded border border-slate-700">
-                          <span className="font-bold text-teal-300"># Afasia vs. Apraxia</span>
-                          <p className="text-[11px] text-slate-400 mt-0.5">Definição etiológica, manifestação e topografia</p>
+                      <div className="space-y-1.5 text-xs text-slate-700">
+                        <div className="p-2 bg-white rounded border border-slate-200 shadow-2xs">
+                          <span className="font-bold text-teal-800"># Afasia vs. Apraxia</span>
+                          <p className="text-[11px] text-slate-500 mt-0.5">Definição etiológica, manifestação e topografia</p>
                         </div>
-                        <div className="p-2 bg-slate-800/80 rounded border border-slate-700">
-                          <span className="font-bold text-teal-300"># Processamento Auditivo</span>
-                          <p className="text-[11px] text-slate-400 mt-0.5">Mecanismos fisiológicos e habilidades auditivas</p>
+                        <div className="p-2 bg-white rounded border border-slate-200 shadow-2xs">
+                          <span className="font-bold text-teal-800"># Processamento Auditivo</span>
+                          <p className="text-[11px] text-slate-500 mt-0.5">Mecanismos fisiológicos e habilidades auditivas</p>
                         </div>
                       </div>
                     )}
 
                     {index === 1 && (
-                      <div className="space-y-1.5 text-xs text-slate-200">
+                      <div className="space-y-1.5 text-xs text-slate-700">
                         <div className="grid grid-cols-2 gap-1.5 text-[11px]">
-                          <span className="p-1.5 bg-slate-800/80 rounded border border-slate-700 text-center font-medium">Laringe & Cordas</span>
-                          <span className="p-1.5 bg-slate-800/80 rounded border border-slate-700 text-center font-medium">Língua & Palato</span>
-                          <span className="p-1.5 bg-slate-800/80 rounded border border-slate-700 text-center font-medium">Ouvido & Cóclea</span>
-                          <span className="p-1.5 bg-slate-800/80 rounded border border-slate-700 text-center font-medium">Áreas Cerebrais</span>
+                          <span className="p-1.5 bg-white rounded border border-slate-200 text-center font-semibold text-slate-800 shadow-2xs">Laringe & Cordas</span>
+                          <span className="p-1.5 bg-white rounded border border-slate-200 text-center font-semibold text-slate-800 shadow-2xs">Língua & Palato</span>
+                          <span className="p-1.5 bg-white rounded border border-slate-200 text-center font-semibold text-slate-800 shadow-2xs">Ouvido & Cóclea</span>
+                          <span className="p-1.5 bg-white rounded border border-slate-200 text-center font-semibold text-slate-800 shadow-2xs">Áreas Cerebrais</span>
                         </div>
                       </div>
                     )}
 
                     {index === 2 && (
-                      <div className="space-y-1.5 text-xs text-slate-200">
-                        <div className="p-1.5 bg-slate-800/80 rounded border border-slate-700 flex items-center justify-between text-[11px]">
-                          <span className="text-rose-300 font-semibold">Fala</span>
+                      <div className="space-y-1.5 text-xs text-slate-700">
+                        <div className="p-1.5 bg-white rounded border border-slate-200 flex items-center justify-between text-[11px] shadow-2xs">
+                          <span className="text-rose-600 font-semibold">Fala</span>
                           <span className="text-slate-400">×</span>
-                          <span className="text-teal-300 font-semibold">Linguagem</span>
+                          <span className="text-teal-700 font-semibold">Linguagem</span>
                         </div>
-                        <div className="p-1.5 bg-slate-800/80 rounded border border-slate-700 flex items-center justify-between text-[11px]">
-                          <span className="text-rose-300 font-semibold">Fonética</span>
+                        <div className="p-1.5 bg-white rounded border border-slate-200 flex items-center justify-between text-[11px] shadow-2xs">
+                          <span className="text-rose-600 font-semibold">Fonética</span>
                           <span className="text-slate-400">×</span>
-                          <span className="text-teal-300 font-semibold">Fonologia</span>
+                          <span className="text-teal-700 font-semibold">Fonologia</span>
                         </div>
-                        <div className="p-1.5 bg-slate-800/80 rounded border border-slate-700 flex items-center justify-between text-[11px]">
-                          <span className="text-rose-300 font-semibold">Apraxia</span>
+                        <div className="p-1.5 bg-white rounded border border-slate-200 flex items-center justify-between text-[11px] shadow-2xs">
+                          <span className="text-rose-600 font-semibold">Apraxia</span>
                           <span className="text-slate-400">×</span>
-                          <span className="text-teal-300 font-semibold">Disartria</span>
+                          <span className="text-teal-700 font-semibold">Disartria</span>
                         </div>
                       </div>
                     )}

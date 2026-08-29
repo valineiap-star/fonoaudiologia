@@ -43,8 +43,8 @@ export const Navbar: React.FC<NavbarProps> = ({ onCtaClick }) => {
             window.scrollTo({ top: 0, behavior: 'smooth' });
           }}
         >
-          <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-[#0B2533] to-teal-700 flex items-center justify-center text-white shadow-md shadow-teal-900/10 group-hover:scale-105 transition-transform">
-            <span className="font-extrabold text-sm tracking-wider text-teal-300">FV</span>
+          <div className="w-10 h-10 rounded-xl bg-teal-600 flex items-center justify-center text-white shadow-md shadow-teal-700/20 group-hover:scale-105 transition-transform">
+            <span className="font-extrabold text-sm tracking-wider text-white">FV</span>
           </div>
           <div>
             <div className="flex items-center gap-1.5">

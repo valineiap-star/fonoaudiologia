@@ -15,10 +15,10 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onCtaClick }) => {
   ];
 
   return (
-    <section className="relative pt-10 sm:pt-16 md:pt-20 pb-12 sm:pb-16 overflow-hidden bg-gradient-to-b from-[#FAFBFD] via-[#F3F7FA] to-[#FAFBFD]">
-      {/* Subtle background glow */}
-      <div className="absolute top-10 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-teal-100/40 rounded-full blur-3xl pointer-events-none -z-10" />
-      <div className="absolute top-40 right-10 w-96 h-96 bg-purple-100/30 rounded-full blur-3xl pointer-events-none -z-10" />
+    <section className="relative pt-10 sm:pt-16 md:pt-20 pb-12 sm:pb-16 overflow-hidden bg-white">
+      {/* Subtle background soft lighting */}
+      <div className="absolute top-10 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-teal-100/30 rounded-full blur-3xl pointer-events-none -z-10" />
+      <div className="absolute top-40 right-10 w-96 h-96 bg-sky-100/20 rounded-full blur-3xl pointer-events-none -z-10" />
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center flex flex-col items-center space-y-8">
         

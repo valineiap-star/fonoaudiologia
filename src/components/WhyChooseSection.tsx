@@ -50,16 +50,6 @@ export const WhyChooseSection: React.FC<WhyChooseSectionProps> = ({ onCtaClick }
               className="bg-white p-7 rounded-2xl border border-slate-200 shadow-xs hover:shadow-md hover:border-teal-300 transition-all group flex flex-col justify-between text-center relative"
             >
               <div>
-                {/* Number Badge at Top Right */}
-                <div className="flex items-center justify-between mb-4">
-                  <span className="text-xs font-bold text-teal-700 bg-teal-50 px-2 py-0.5 rounded-full border border-teal-100 font-mono">
-                    #{benefit.number}
-                  </span>
-                  <span className="text-2xl font-black text-slate-200 group-hover:text-teal-200 transition-colors font-mono">
-                    0{benefit.number}
-                  </span>
-                </div>
-
                 {/* Centered Icon Container */}
                 <div className="mb-4 flex justify-center">
                   <div className="w-14 h-14 rounded-2xl bg-teal-50 border border-teal-100 flex items-center justify-center group-hover:bg-teal-600 transition-colors shadow-xs">

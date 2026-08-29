@@ -53,32 +53,32 @@ export const ModulesSection: React.FC<ModulesSectionProps> = ({ onPreviewSheet, 
           </p>
         </div>
 
-        {/* Highlight Banner: +100 MATERIAIS VISUAIS */}
-        <div className="mt-10 mb-14 p-6 sm:p-8 rounded-2xl bg-gradient-to-r from-[#0B2533] via-[#0F3B50] to-[#0A202C] text-white shadow-xl relative overflow-hidden">
-          <div className="absolute right-0 top-0 bottom-0 w-1/3 bg-teal-500/10 rounded-full blur-2xl pointer-events-none" />
+        {/* Highlight Banner: +100 MATERIAIS VISUAIS - Light & Clean */}
+        <div className="mt-10 mb-14 p-6 sm:p-8 rounded-2xl bg-gradient-to-r from-teal-50 via-sky-50 to-emerald-50 border border-teal-200 text-slate-900 shadow-md relative overflow-hidden">
+          <div className="absolute right-0 top-0 bottom-0 w-1/3 bg-teal-200/25 rounded-full blur-2xl pointer-events-none" />
           
           <div className="relative z-10 flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
             <div className="space-y-2">
-              <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-teal-500/20 text-teal-300 text-xs font-bold uppercase tracking-wider border border-teal-500/30">
-                <Sparkles className="w-3.5 h-3.5" />
+              <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-teal-100 text-teal-800 text-xs font-bold uppercase tracking-wider border border-teal-200">
+                <Sparkles className="w-3.5 h-3.5 text-teal-600" />
                 Acervo Completo
               </div>
-              <h3 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-white">
+              <h3 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-slate-900">
                 +100 MATERIAIS VISUAIS
               </h3>
-              <p className="text-sm text-slate-300 max-w-xl">
+              <p className="text-sm text-slate-600 max-w-xl">
                 Mapas • Anatomias • Tabelas • Comparativos • Fluxogramas • Resumos
               </p>
             </div>
 
             <div className="flex flex-wrap items-center justify-center gap-3">
-              <div className="bg-white/10 backdrop-blur-md px-4 py-2.5 rounded-xl border border-white/15 text-center">
-                <span className="text-xl font-bold text-teal-300 block">10</span>
-                <span className="text-[11px] text-slate-300 font-medium">Módulos Especializados</span>
+              <div className="bg-white/80 backdrop-blur-xs px-4 py-2.5 rounded-xl border border-teal-200 text-center shadow-2xs">
+                <span className="text-xl font-bold text-teal-800 block">10</span>
+                <span className="text-[11px] text-slate-600 font-medium">Módulos Especializados</span>
               </div>
-              <div className="bg-white/10 backdrop-blur-md px-4 py-2.5 rounded-xl border border-white/15 text-center">
-                <span className="text-xl font-bold text-teal-300 block">100%</span>
-                <span className="text-[11px] text-slate-300 font-medium">Digital & Imprimível</span>
+              <div className="bg-white/80 backdrop-blur-xs px-4 py-2.5 rounded-xl border border-teal-200 text-center shadow-2xs">
+                <span className="text-xl font-bold text-teal-800 block">100%</span>
+                <span className="text-[11px] text-slate-600 font-medium">Digital & Imprimível</span>
               </div>
             </div>
           </div>
@@ -199,7 +199,7 @@ export const ModulesSection: React.FC<ModulesSectionProps> = ({ onPreviewSheet, 
                     className="cursor-pointer group relative rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow"
                   >
                     <AnatomyMockupGraphic sheetId={activeModule.sampleSheetId} showLabels={false} className="max-h-40" />
-                    <div className="absolute inset-0 bg-slate-900/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white text-xs font-semibold gap-1.5 backdrop-blur-[1px]">
+                    <div className="absolute inset-0 bg-teal-950/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white text-xs font-semibold gap-1.5 backdrop-blur-[1px]">
                       <Eye className="w-4 h-4" />
                       Clique para Visualizar em Alta Resolução
                     </div>
@@ -211,7 +211,7 @@ export const ModulesSection: React.FC<ModulesSectionProps> = ({ onPreviewSheet, 
               <div className="mt-6 pt-4 border-t border-slate-200">
                 <button
                   onClick={onCtaClick}
-                  className="w-full py-3 bg-[#0B2533] hover:bg-teal-700 text-white font-bold text-xs sm:text-sm rounded-xl transition-all shadow-sm flex items-center justify-center gap-2 cursor-pointer"
+                  className="w-full py-3 bg-teal-600 hover:bg-teal-700 active:bg-teal-800 text-white font-bold text-xs sm:text-sm rounded-xl transition-all shadow-sm flex items-center justify-center gap-2 cursor-pointer"
                 >
                   <span>QUERO ACESSAR O FONO VISUAL</span>
                 </button>
