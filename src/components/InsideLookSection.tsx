@@ -80,7 +80,18 @@ export const InsideLookSection: React.FC<InsideLookSectionProps> = ({ onSelectSh
                   <h4 className="text-sm font-bold text-white mb-2 line-clamp-1">
                     {sheet.title}
                   </h4>
-                  <AnatomyMockupGraphic sheetId={sheet.id} showLabels={false} className="shadow-none border-none p-2" />
+                  <div className="aspect-[4/3] rounded-xl overflow-hidden bg-slate-950 flex items-center justify-center border border-slate-800">
+                    {sheet.imageUrl ? (
+                      <img
+                        src={sheet.imageUrl}
+                        alt={sheet.title}
+                        referrerPolicy="no-referrer"
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform"
+                      />
+                    ) : (
+                      <AnatomyMockupGraphic sheetId={sheet.id} showLabels={false} className="shadow-none border-none p-2" />
+                    )}
+                  </div>
                 </div>
                 <div className="bg-slate-950/60 p-3 flex items-center justify-between text-xs text-slate-300 border-t border-slate-800">
                   <span className="text-[11px] text-slate-400">{sheet.category}</span>
@@ -102,8 +113,17 @@ export const InsideLookSection: React.FC<InsideLookSectionProps> = ({ onSelectSh
                 className="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-xl hover:border-teal-400 transition-all group cursor-pointer flex flex-col justify-between"
               >
                 {/* Visual Sheet Preview Box */}
-                <div className="relative bg-slate-950 p-2 overflow-hidden">
-                  <AnatomyMockupGraphic sheetId={sheet.id} showLabels={false} className="border-none shadow-none" />
+                <div className="relative bg-slate-950 aspect-[16/10] overflow-hidden flex items-center justify-center">
+                  {sheet.imageUrl ? (
+                    <img
+                      src={sheet.imageUrl}
+                      alt={sheet.title}
+                      referrerPolicy="no-referrer"
+                      className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                    />
+                  ) : (
+                    <AnatomyMockupGraphic sheetId={sheet.id} showLabels={false} className="border-none shadow-none" />
+                  )}
                   
                   {/* Hover Overlay */}
                   <div className="absolute inset-0 bg-teal-950/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center backdrop-blur-xs">

@@ -177,6 +177,7 @@ export const MATERIAL_SHEETS: MaterialSheet[] = [
     badge: 'Módulo 01',
     tags: ['Cartilagens', 'Músculos Intrínsecos', 'Inervação'],
     color: '#0f3b50',
+    imageUrl: 'https://i.postimg.cc/HsGHxmRR/Chat-GPT-Image-27-de-ago-de-2026-18-26-16-(5).png',
     aspect: 'portrait',
     details: {
       structures: ['Cartilagem Tireóidea', 'Cartilagem Cricóidea', 'Cartilagens Aritenóideas', 'Epiglote', 'Ligamento Vocal'],
@@ -192,6 +193,7 @@ export const MATERIAL_SHEETS: MaterialSheet[] = [
     badge: 'Módulo 01 / 05',
     tags: ['Espaço de Reinke', 'Fendas Glóticas', 'Ciclo Vibratório'],
     color: '#0d9488',
+    imageUrl: 'https://i.postimg.cc/7YvD64dW/Chat-GPT-Image-27-de-ago-de-2026-18-35-20-(10).png',
     aspect: 'portrait',
     details: {
       structures: ['Epitélio Estratificado', 'Lâmina Própria (Camadas Superficial, Intermediária e Profunda)', 'Músculo Tireoaritenóideo (Vocal)'],
@@ -207,6 +209,7 @@ export const MATERIAL_SHEETS: MaterialSheet[] = [
     badge: 'Módulo 01 / 07',
     tags: ['Cóclea', 'Cadeia Ossicular', 'Nervo Auditivo VIII'],
     color: '#3b82f6',
+    imageUrl: 'https://i.postimg.cc/15pSVT1M/Chat-GPT-Image-27-de-ago-de-2026-18-26-16-(6).png',
     aspect: 'landscape',
     details: {
       structures: ['Pavilhão e Meato', 'Membrana Timpânica', 'Martelo, Bigorna e Estribo', 'Órgão de Corti', 'Núcleo Coclear'],
@@ -222,6 +225,7 @@ export const MATERIAL_SHEETS: MaterialSheet[] = [
     badge: 'Módulo 01 / 04',
     tags: ['Mastigação', 'Mímica', 'Inervação V e VII'],
     color: '#6366f1',
+    imageUrl: 'https://i.postimg.cc/kXr94CzZ/Chat-GPT-Image-27-de-ago-de-2026-18-35-19-(5).png',
     aspect: 'portrait',
     details: {
       structures: ['M. Orbicular da Boca', 'M. Bucinador', 'M. Masseter', 'M. Temporal', 'M. Pterigóideos'],
@@ -237,6 +241,7 @@ export const MATERIAL_SHEETS: MaterialSheet[] = [
     badge: 'Módulo 01 / 03',
     tags: ['Músculos Extrínsecos', 'Frênulo', 'Nervo Hipoglosso'],
     color: '#8b5cf6',
+    imageUrl: 'https://i.postimg.cc/wTKHvzZr/Chat-GPT-Image-27-de-ago-de-2026-18-35-19-(6).png',
     aspect: 'portrait',
     details: {
       structures: ['M. Genioglosso', 'M. Hioglosso', 'M. Estiloglosso', 'Músculos Longitudinais e Transversos', 'Papilas Gustativas'],
@@ -252,6 +257,7 @@ export const MATERIAL_SHEETS: MaterialSheet[] = [
     badge: 'Módulo 01 / 05',
     tags: ['Velofaringe', 'Ressonância', 'Hipernasalidade'],
     color: '#14b8a6',
+    imageUrl: 'https://i.postimg.cc/J4wmn8vP/Chat-GPT-Image-27-de-ago-de-2026-18-35-20-(9).png',
     aspect: 'landscape',
     details: {
       structures: ['Processo Palatino da Maxila', 'Lâmina Horizontal do Palatino', 'M. Elevador do Véu Palatino', 'Úvula'],
@@ -267,6 +273,7 @@ export const MATERIAL_SHEETS: MaterialSheet[] = [
     badge: 'Módulo 01 / 09',
     tags: ['Área de Broca', 'Área de Wernicke', 'Fascículo Arqueado'],
     color: '#0f766e',
+    imageUrl: 'https://i.postimg.cc/9FG2wSHJ/Chat-GPT-Image-27-de-ago-de-2026-18-26-16-(7).png',
     aspect: 'portrait',
     details: {
       structures: ['Área de Broca (Frontal)', 'Área de Wernicke (Temporal)', 'Fascículo Arqueado', 'Giro Supramarginal e Angular'],
@@ -282,6 +289,7 @@ export const MATERIAL_SHEETS: MaterialSheet[] = [
     badge: 'Módulo 01',
     tags: ['Diafragma', 'Pressão Subglótica', 'Suporte Aéreo'],
     color: '#0284c7',
+    imageUrl: 'https://i.postimg.cc/HsGHxmRR/Chat-GPT-Image-27-de-ago-de-2026-18-26-16-(5).png',
     aspect: 'landscape',
     details: {
       structures: ['Diafragma', 'Músculos Intercostais Externos/Internos', 'Traqueia e Brônquios', 'Volumes e Capacidades Pulmonares'],
@@ -297,6 +305,7 @@ export const MATERIAL_SHEETS: MaterialSheet[] = [
     badge: 'Módulo 08',
     tags: ['Fase Faríngea', 'Elevação Laríngea', 'IDDSI'],
     color: '#d97706',
+    imageUrl: 'https://i.postimg.cc/GhkRTNnM/Chat-GPT-Image-27-de-ago-de-2026-18-26-16-(8).png',
     aspect: 'portrait',
     details: {
       structures: ['Base de Língua', 'Valécula Epiglótica', 'Seios Piriformes', 'Esfíncter Esofágico Superior'],

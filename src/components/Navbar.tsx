@@ -61,12 +61,6 @@ export const Navbar: React.FC<NavbarProps> = ({ onCtaClick }) => {
         {/* Desktop Navigation Links */}
         <div className="hidden lg:flex items-center space-x-7 text-sm font-medium text-slate-600">
           <button
-            onClick={() => scrollToSection('modulos')}
-            className="hover:text-teal-600 transition-colors"
-          >
-            Módulos
-          </button>
-          <button
             onClick={() => scrollToSection('beneficios')}
             className="hover:text-teal-600 transition-colors"
           >
@@ -125,12 +119,6 @@ export const Navbar: React.FC<NavbarProps> = ({ onCtaClick }) => {
       {mobileMenuOpen && (
         <div className="lg:hidden px-4 pt-3 pb-6 bg-white border-b border-slate-200 shadow-xl space-y-3 animate-in slide-in-from-top-2 duration-150">
           <div className="flex flex-col space-y-2 text-sm font-medium text-slate-700">
-            <button
-              onClick={() => scrollToSection('modulos')}
-              className="text-left px-3 py-2 rounded-lg hover:bg-slate-50 text-slate-800"
-            >
-              Módulos do Material
-            </button>
             <button
               onClick={() => scrollToSection('beneficios')}
               className="text-left px-3 py-2 rounded-lg hover:bg-slate-50 text-slate-800"

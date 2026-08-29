@@ -41,8 +41,17 @@ export const SheetModal: React.FC<SheetModalProps> = ({ sheet, onClose, onCtaCli
         <div className="flex-1 overflow-y-auto p-6 grid grid-cols-1 lg:grid-cols-12 gap-6">
           {/* Left / Top: High Fidelity Visual Mockup */}
           <div className="lg:col-span-7 flex flex-col items-center justify-center bg-slate-950 p-4 rounded-xl shadow-inner border border-slate-800 relative group">
-            <div className="w-full">
-              <AnatomyMockupGraphic sheetId={sheet.id} showLabels={true} className="w-full" />
+            <div className="w-full flex items-center justify-center min-h-[300px]">
+              {sheet.imageUrl ? (
+                <img
+                  src={sheet.imageUrl}
+                  alt={sheet.title}
+                  referrerPolicy="no-referrer"
+                  className="max-h-[50vh] w-auto max-w-full rounded-lg object-contain shadow-xl"
+                />
+              ) : (
+                <AnatomyMockupGraphic sheetId={sheet.id} showLabels={true} className="w-full" />
+              )}
             </div>
             <div className="mt-3 flex items-center justify-between w-full text-[11px] text-slate-400 px-2">
               <span className="flex items-center gap-1 text-teal-400">

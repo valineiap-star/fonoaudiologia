@@ -54,7 +54,7 @@
 }
 
 .animate-infinite-marquee {
-  animation: marquee 32s linear infinite;
+  animation: marquee 42s linear infinite;
   will-change: transform;
 }
 

@@ -2,7 +2,7 @@ import React from 'react';
 import { BENEFITS_DATA } from '../data/materialsData';
 import { 
   Eye, Zap, Search, Layers, Smartphone, BookmarkCheck, 
-  XCircle, CheckCircle2, ArrowRight 
+  XCircle, CheckCircle2 
 } from 'lucide-react';
 
 interface WhyChooseSectionProps {
@@ -11,7 +11,7 @@ interface WhyChooseSectionProps {
 
 export const WhyChooseSection: React.FC<WhyChooseSectionProps> = ({ onCtaClick }) => {
   const getBenefitIcon = (iconName: string) => {
-    const props = { className: 'w-6 h-6 text-teal-600' };
+    const props = { className: 'w-6 h-6 text-teal-600 group-hover:text-white transition-colors shrink-0' };
     switch (iconName) {
       case 'Eye': return <Eye {...props} />;
       case 'Zap': return <Zap {...props} />;
@@ -42,21 +42,29 @@ export const WhyChooseSection: React.FC<WhyChooseSectionProps> = ({ onCtaClick }
           </p>
         </div>
 
-        {/* 6 Benefits Grid */}
+        {/* 6 Benefits Grid - Centered Icons & Layout */}
         <div className="mt-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {BENEFITS_DATA.map((benefit) => (
             <div
               key={benefit.number}
-              className="bg-white p-7 rounded-2xl border border-slate-200 shadow-xs hover:shadow-md hover:border-teal-300 transition-all group flex flex-col justify-between"
+              className="bg-white p-7 rounded-2xl border border-slate-200 shadow-xs hover:shadow-md hover:border-teal-300 transition-all group flex flex-col justify-between text-center relative"
             >
               <div>
-                <div className="flex items-center justify-between mb-5">
-                  <div className="w-12 h-12 rounded-xl bg-teal-50 border border-teal-100 flex items-center justify-center group-hover:bg-teal-600 group-hover:text-white transition-colors">
-                    {getBenefitIcon(benefit.iconName)}
-                  </div>
+                {/* Number Badge at Top Right */}
+                <div className="flex items-center justify-between mb-4">
+                  <span className="text-xs font-bold text-teal-700 bg-teal-50 px-2 py-0.5 rounded-full border border-teal-100 font-mono">
+                    #{benefit.number}
+                  </span>
                   <span className="text-2xl font-black text-slate-200 group-hover:text-teal-200 transition-colors font-mono">
                     0{benefit.number}
                   </span>
+                </div>
+
+                {/* Centered Icon Container */}
+                <div className="mb-4 flex justify-center">
+                  <div className="w-14 h-14 rounded-2xl bg-teal-50 border border-teal-100 flex items-center justify-center group-hover:bg-teal-600 transition-colors shadow-xs">
+                    {getBenefitIcon(benefit.iconName)}
+                  </div>
                 </div>
 
                 <h3 className="text-base font-bold text-slate-900 tracking-tight mb-2">
@@ -68,7 +76,7 @@ export const WhyChooseSection: React.FC<WhyChooseSectionProps> = ({ onCtaClick }
                 </p>
               </div>
 
-              <div className="mt-5 pt-3 border-t border-slate-100 flex items-center text-xs font-semibold text-teal-600">
+              <div className="mt-5 pt-3 border-t border-slate-100 flex items-center justify-center text-xs font-semibold text-teal-600">
                 <span>Material pronto para consulta</span>
               </div>
             </div>
@@ -154,17 +162,6 @@ export const WhyChooseSection: React.FC<WhyChooseSectionProps> = ({ onCtaClick }
               </ul>
             </div>
 
-          </div>
-
-          {/* Quick CTA */}
-          <div className="mt-10 text-center">
-            <button
-              onClick={onCtaClick}
-              className="inline-flex items-center gap-2 px-8 py-3.5 bg-teal-600 hover:bg-teal-700 text-white font-bold text-sm rounded-xl shadow-md transition-all cursor-pointer"
-            >
-              <span>QUERO ACESSAR O FONO VISUAL</span>
-              <ArrowRight className="w-4 h-4" />
-            </button>
           </div>
         </div>
 

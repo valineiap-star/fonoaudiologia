@@ -17,6 +17,7 @@ export interface MaterialSheet {
   badge: string;
   tags: string[];
   color: string;
+  imageUrl?: string;
   aspect: 'portrait' | 'landscape';
   details: {
     structures: string[];

@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { 
-  Check, Clock, ShieldCheck, Zap, Lock, Sparkles, 
+  Check, ShieldCheck, Zap, Lock, Sparkles, 
   ArrowRight, X as XIcon, Star
 } from 'lucide-react';
 
@@ -10,37 +10,6 @@ interface OfferSectionProps {
 }
 
 export const OfferSection: React.FC<OfferSectionProps> = ({ onGuaranteeClick, onOpenCheckout }) => {
-  // Countdown timer starting at 15:00 (900 seconds)
-  const [timeLeft, setTimeLeft] = useState<number>(15 * 60);
-
-  useEffect(() => {
-    // Check if a timer exists in localStorage
-    const savedTime = localStorage.getItem('fono_timer_left');
-    if (savedTime) {
-      const parsed = parseInt(savedTime, 10);
-      if (parsed > 0) {
-        setTimeLeft(parsed);
-      }
-    }
-
-    const timer = setInterval(() => {
-      setTimeLeft((prev) => {
-        if (prev <= 1) {
-          localStorage.setItem('fono_timer_left', (15 * 60).toString());
-          return 15 * 60;
-        }
-        const updated = prev - 1;
-        localStorage.setItem('fono_timer_left', updated.toString());
-        return updated;
-      });
-    }, 1000);
-
-    return () => clearInterval(timer);
-  }, []);
-
-  const formatMinutes = Math.floor(timeLeft / 60).toString().padStart(2, '0');
-  const formatSeconds = (timeLeft % 60).toString().padStart(2, '0');
-
   return (
     <section id="oferta" className="py-20 bg-gradient-to-b from-[#FAFBFD] via-[#F1F6F9] to-[#FAFBFD] border-b border-slate-200/60 relative">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -58,22 +27,6 @@ export const OfferSection: React.FC<OfferSectionProps> = ({ onGuaranteeClick, on
           <p className="text-sm sm:text-base text-slate-600">
             Selecione a melhor opção para a sua rotina de estudos e garanta acesso digital imediato.
           </p>
-        </div>
-
-        {/* Limited Time Offer Notice with Timer */}
-        <div className="mt-8 max-w-md mx-auto bg-amber-50 border border-amber-200/80 rounded-2xl p-4 flex items-center justify-between shadow-xs">
-          <div className="flex items-center gap-2.5">
-            <Clock className="w-5 h-5 text-amber-700 animate-pulse" />
-            <div>
-              <span className="text-[11px] font-bold text-amber-900 uppercase tracking-wider block">
-                OFERTA DISPONÍVEL POR TEMPO LIMITADO
-              </span>
-              <span className="text-xs text-amber-700">Garanta o valor promocional antes do encerramento</span>
-            </div>
-          </div>
-          <div className="bg-amber-900 text-white font-mono font-bold text-sm px-3 py-1.5 rounded-xl shadow-xs">
-            {formatMinutes}:{formatSeconds}
-          </div>
         </div>
 
         {/* 2 Offer Cards Grid */}
