@@ -477,6 +477,28 @@ export const TESTIMONIALS_DATA: TestimonialItem[] = [
     rating: 5,
     highlight: 'Organização impecável por módulos',
     quote: 'A organização em módulos por especialidade agiliza muito. Quando estou com dúvida rápida em marcos do desenvolvimento ou classificação fonética antes de atender, abro direto no tablet. Recomendo de olhos fechados!'
+  },
+  {
+    id: 'test-07',
+    author: 'Larissa Mendonça',
+    role: 'Fonoaudióloga Hospitalar • Disfagia & UTI (CRFa 4-18230)',
+    location: 'Salvador, BA',
+    avatarUrl: 'https://images.unsplash.com/photo-1594824813501-48afab3fe0d4?w=160&h=160&fit=crop&crop=faces&q=80',
+    avatarInitials: 'LM',
+    rating: 5,
+    highlight: 'Segurança clínica nos plantões',
+    quote: 'Trabalho em ambiente hospitalar e o material de disfagia com as fases da deglutição e os pares cranianos me acompanha em todos os plantões. Ter essas referências anatômicas esquematizadas na palma da mão traz uma segurança imensa na hora de discutir conduta.'
+  },
+  {
+    id: 'test-08',
+    author: 'Rodrigo Alencar',
+    role: 'Fonoaudiólogo • Audiologia Clínica & Ocupacional (CRFa 5-21049)',
+    location: 'Brasília, DF',
+    avatarUrl: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=160&h=160&fit=crop&crop=faces&q=80',
+    avatarInitials: 'RA',
+    rating: 5,
+    highlight: 'Material de consulta indispensável',
+    quote: 'As pranchas com os testes de via aérea/óssea, mascaramento e as classificações de perda auditiva tornaram o raciocínio muito mais visual e rápido. Facilitou inclusive para mostrar o diagnóstico com clareza aos pacientes.'
   }
 ];
 

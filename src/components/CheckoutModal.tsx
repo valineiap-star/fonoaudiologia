@@ -28,13 +28,16 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({ isOpen, onClose, i
   const originalPrice = isComplete ? 'R$ 97,00' : 'R$ 39,00';
   const installmentText = isComplete ? 'ou até 3x de R$ 9,80' : 'Pagamento único via PIX ou Cartão';
 
+  const checkoutUrl = isComplete 
+    ? 'https://pay.wiapy.com/PQkBus3GGCH' 
+    : 'https://pay.wiapy.com/pq8eDC6y7VLk';
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setIsProcessing(true);
     setTimeout(() => {
-      setIsProcessing(false);
-      setIsSuccess(true);
-    }, 1200);
+      window.location.href = checkoutUrl;
+    }, 600);
   };
 
   return (

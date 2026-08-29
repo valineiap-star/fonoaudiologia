@@ -306,18 +306,19 @@ export const OfferSection: React.FC<OfferSectionProps> = ({ onGuaranteeClick, on
 
               {/* Big CTA Button */}
               <div className="pt-2 space-y-2">
-                <button
-                  type="button"
-                  onClick={() => onOpenCheckout('completo')}
-                  className="w-full py-4 px-6 bg-teal-600 hover:bg-teal-700 active:bg-teal-800 text-white font-extrabold text-base rounded-xl shadow-xl shadow-teal-700/25 hover:shadow-2xl transition-all transform hover:-translate-y-0.5 flex items-center justify-center gap-2 cursor-pointer group"
+                <a
+                  href="https://pay.wiapy.com/PQkBus3GGCH"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full py-4 px-6 bg-teal-600 hover:bg-teal-700 active:bg-teal-800 text-white font-extrabold text-base rounded-xl shadow-xl shadow-teal-700/25 hover:shadow-2xl transition-all transform hover:-translate-y-0.5 flex items-center justify-center gap-2 cursor-pointer group no-underline"
                   style={{ backgroundColor: '#0d9488', color: '#ffffff' }}
                 >
                   <Zap className="w-5 h-5 text-amber-300 fill-amber-300" />
                   <span className="text-white font-extrabold tracking-wide">
-                    QUERO O PLANO COMPLETO COM BÔNUS
+                    QUERO O PLANO COMPLETO COM BÔNUS (R$ 27,90)
                   </span>
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform text-white" />
-                </button>
+                </a>
                 <p className="text-[11px] text-center text-slate-500 font-medium">
                   Acesso vitalício • 7 dias de garantia incondicional
                 </p>
