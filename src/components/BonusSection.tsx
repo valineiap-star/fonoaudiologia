@@ -38,7 +38,7 @@ export const BonusSection: React.FC<BonusSectionProps> = ({ onCtaClick }) => {
               >
                 {/* Top Badge: INCLUSO GRATUITAMENTE */}
                 <div className="bg-gradient-to-r from-teal-600 to-teal-700 text-white px-5 py-3 flex items-center justify-between">
-                  <span className="text-xs font-black tracking-wider text-teal-100 font-mono">
+                  <span className="text-xs font-extrabold tracking-wider text-teal-100 uppercase">
                     {bonus.number}
                   </span>
                   <span className="text-[11px] font-bold bg-white/20 text-white px-2.5 py-0.5 rounded-full border border-white/30">

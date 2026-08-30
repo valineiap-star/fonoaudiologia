@@ -24,9 +24,9 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onCtaClick }) => {
         
         {/* Main Headline */}
         <h1 className="text-3xl sm:text-5xl md:text-6xl font-extrabold text-slate-900 tracking-tight leading-[1.18] text-center max-w-3xl mx-auto">
-          DOMINE OS PRINCIPAIS CONTEÚDOS DA FONOAUDIOLOGIA{' '}
+          +90 MAPAS MENTAIS DE ESTUDO PARA{' '}
           <span className="text-teal-600 relative inline-block">
-            DE FORMA VISUAL
+            FONOAUDIOLOGIA
             <svg className="absolute -bottom-1.5 left-0 w-full h-2 text-teal-300 -z-10" viewBox="0 0 100 20" preserveAspectRatio="none">
               <path d="M0,10 Q50,0 100,10" stroke="currentColor" strokeWidth="8" fill="none" />
             </svg>

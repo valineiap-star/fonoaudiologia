@@ -72,7 +72,7 @@ export const OfferSection: React.FC<OfferSectionProps> = ({ onGuaranteeClick, on
             {/* Top Bar */}
             <div className="bg-slate-50 text-slate-700 px-6 py-4 border-b border-slate-200 flex items-center justify-between">
               <div>
-                <span className="text-[11px] font-bold uppercase tracking-wider text-slate-500 block font-mono">
+                <span className="text-[11px] font-bold uppercase tracking-wider text-slate-500 block">
                   OPÇÃO DE ENTRADA
                 </span>
                 <h3 className="text-base sm:text-lg font-bold text-slate-900">
@@ -90,32 +90,32 @@ export const OfferSection: React.FC<OfferSectionProps> = ({ onGuaranteeClick, on
               <div className="p-5 rounded-2xl bg-gradient-to-b from-slate-50 to-slate-100/90 border border-slate-200/80 shadow-xs flex flex-col items-center text-center space-y-2.5">
                 {/* De / Por & Discount badge */}
                 <div className="flex items-center justify-center gap-2">
-                  <span className="text-xs text-slate-500 font-medium">De</span>
-                  <span className="text-xs line-through text-slate-400 font-semibold">R$ 39,00</span>
-                  <span className="text-xs text-slate-500 font-medium">por apenas</span>
+                  <span className="text-xs text-slate-500 font-normal">De</span>
+                  <span className="text-xs line-through text-slate-400 font-normal">R$ 39,00</span>
+                  <span className="text-xs text-slate-500 font-normal">por apenas</span>
                   <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-md bg-slate-200 text-slate-700 text-[11px] font-bold">
                     <Tag className="w-3 h-3" />
                     74% OFF
                   </span>
                 </div>
 
-                {/* Big Centered Price */}
+                {/* Big Centered Price with Poppins Bold & Regular */}
                 <div className="flex items-baseline justify-center gap-1 text-slate-900 my-1">
-                  <span className="text-xl sm:text-2xl font-bold text-slate-500">R$</span>
-                  <span className="text-5xl sm:text-6xl font-black tracking-tight text-slate-900 font-mono">
+                  <span className="text-xl sm:text-2xl font-bold text-slate-600">R$</span>
+                  <span className="text-6xl sm:text-7xl font-extrabold tracking-tight text-slate-900 leading-none">
                     10
                   </span>
-                  <div className="flex flex-col text-left">
-                    <span className="text-xl sm:text-2xl font-black text-slate-900 font-mono leading-none">,00</span>
-                    <span className="text-[10px] uppercase font-bold text-slate-500 tracking-wider">à vista</span>
+                  <div className="flex flex-col text-left justify-end pb-1">
+                    <span className="text-2xl sm:text-3xl font-extrabold text-slate-900 leading-none">,00</span>
+                    <span className="text-[11px] uppercase font-medium text-slate-500 tracking-wider">à vista</span>
                   </div>
                 </div>
 
                 {/* Subtitle / Conditions */}
-                <div className="w-full pt-2 border-t border-slate-200 flex items-center justify-center text-[11px] text-slate-600 font-medium">
+                <div className="w-full pt-2.5 border-t border-slate-200 flex items-center justify-center text-[12px] text-slate-600 font-normal">
                   <span className="flex items-center gap-1.5">
                     <Zap className="w-3.5 h-3.5 text-teal-600" />
-                    Pagamento único • Sem mensalidade • Acesso digital
+                    <span>Pagamento único • Sem mensalidade • Acesso digital</span>
                   </span>
                 </div>
               </div>
@@ -218,36 +218,36 @@ export const OfferSection: React.FC<OfferSectionProps> = ({ onGuaranteeClick, on
                 
                 {/* De / Por & Economy badge */}
                 <div className="flex items-center justify-center gap-2">
-                  <span className="text-xs text-slate-500 font-medium">De</span>
-                  <span className="text-xs line-through text-slate-400 font-semibold">R$ 97,00</span>
-                  <span className="text-xs text-slate-500 font-medium">por apenas</span>
-                  <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-md bg-teal-600 text-white text-[11px] font-extrabold shadow-2xs">
+                  <span className="text-xs text-slate-500 font-normal">De</span>
+                  <span className="text-xs line-through text-slate-400 font-normal">R$ 97,00</span>
+                  <span className="text-xs text-slate-500 font-normal">por apenas</span>
+                  <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-md bg-teal-600 text-white text-[11px] font-bold shadow-2xs">
                     <Sparkles className="w-3 h-3 text-teal-200" />
                     ECONOMIZE R$ 69,10
                   </span>
                 </div>
 
-                {/* Big Centered Price */}
+                {/* Big Centered Price with Poppins Bold & Regular */}
                 <div className="flex items-baseline justify-center gap-1 text-teal-900 my-1">
                   <span className="text-xl sm:text-2xl font-bold text-teal-700">R$</span>
-                  <span className="text-5xl sm:text-6xl font-black tracking-tight text-teal-800 font-mono">
+                  <span className="text-6xl sm:text-7xl font-extrabold tracking-tight text-teal-900 leading-none">
                     27
                   </span>
-                  <div className="flex flex-col text-left">
-                    <span className="text-xl sm:text-2xl font-black text-teal-800 font-mono leading-none">,90</span>
-                    <span className="text-[10px] uppercase font-bold text-teal-800 tracking-wider">à vista</span>
+                  <div className="flex flex-col text-left justify-end pb-1">
+                    <span className="text-2xl sm:text-3xl font-extrabold text-teal-900 leading-none">,90</span>
+                    <span className="text-[11px] uppercase font-medium text-teal-700 tracking-wider">à vista</span>
                   </div>
                 </div>
 
                 {/* Centered Installment badge & Vitalício */}
-                <div className="w-full pt-2 border-t border-teal-200/80 flex flex-col sm:flex-row items-center justify-center gap-2 text-xs">
-                  <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-teal-100/90 text-teal-900 font-bold text-[11px] border border-teal-200">
-                    <CreditCard className="w-3.5 h-3.5 text-teal-700" />
-                    <span>ou em até <strong>3x de R$ 9,80</strong> no cartão</span>
+                <div className="w-full pt-2.5 border-t border-teal-200/80 flex flex-col sm:flex-row items-center justify-center gap-2 text-xs">
+                  <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-teal-100/90 text-teal-950 font-normal text-[11.5px] border border-teal-200">
+                    <CreditCard className="w-3.5 h-3.5 text-teal-700 shrink-0" />
+                    <span>ou em até <strong className="font-bold text-teal-900">3x de R$ 9,80</strong> no cartão</span>
                   </div>
-                  <span className="text-[11px] font-semibold text-teal-800 flex items-center gap-1">
-                    <Zap className="w-3 h-3 text-teal-600" />
-                    Acesso vitalício aos materiais
+                  <span className="text-[11.5px] font-normal text-teal-800 flex items-center gap-1">
+                    <Zap className="w-3 h-3 text-teal-600 shrink-0" />
+                    <span>Acesso vitalício aos materiais</span>
                   </span>
                 </div>
               </div>

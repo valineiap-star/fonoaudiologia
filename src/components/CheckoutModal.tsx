@@ -124,12 +124,12 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({ isOpen, onClose, i
                   >
                     <div className="flex items-center justify-between mb-1">
                       <span className="text-xs font-bold text-slate-900">Plano Essencial</span>
-                      <span className="text-[10px] font-bold text-slate-500 line-through">R$ 39</span>
+                      <span className="text-[10px] font-normal text-slate-400 line-through">R$ 39</span>
                     </div>
-                    <div className="text-base font-black text-slate-900 font-mono">
+                    <div className="text-base font-extrabold text-slate-900">
                       R$ 10,00
                     </div>
-                    <div className="text-[10px] text-slate-500">+30 materiais</div>
+                    <div className="text-[10px] text-slate-500 font-normal">+30 materiais</div>
                   </button>
 
                   <button
@@ -146,12 +146,12 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({ isOpen, onClose, i
                     </div>
                     <div className="flex items-center justify-between mb-1">
                       <span className="text-xs font-bold text-teal-900">Plano Completo</span>
-                      <span className="text-[10px] font-bold text-slate-400 line-through">R$ 97</span>
+                      <span className="text-[10px] font-normal text-slate-400 line-through">R$ 97</span>
                     </div>
-                    <div className="text-base font-black text-teal-700 font-mono">
+                    <div className="text-base font-extrabold text-teal-800">
                       R$ 27,90
                     </div>
-                    <div className="text-[10px] text-teal-700 font-medium">10 Módulos + 3 Bônus</div>
+                    <div className="text-[10px] text-teal-700 font-normal">10 Módulos + 3 Bônus</div>
                   </button>
                 </div>
               </div>
@@ -167,9 +167,9 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({ isOpen, onClose, i
                   </h4>
                 </div>
                 <div className="text-right">
-                  <span className="text-xs text-slate-400 line-through block">{originalPrice}</span>
-                  <span className="text-lg font-black text-teal-700 font-mono">{currentPrice}</span>
-                  <span className="text-[10px] text-slate-500 block">{installmentText}</span>
+                  <span className="text-xs text-slate-400 line-through block font-normal">{originalPrice}</span>
+                  <span className="text-lg font-extrabold text-teal-800 block">{currentPrice}</span>
+                  <span className="text-[10px] text-slate-500 block font-normal">{installmentText}</span>
                 </div>
               </div>
 
