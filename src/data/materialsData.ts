@@ -1,4 +1,4 @@
-import { ModuleItem, MaterialSheet, BonusItem, BenefitItem, FaqItem, TestimonialItem } from '../types';
+import { ModuleItem, MaterialSheet, BonusItem, BenefitItem, FaqItem, TestimonialItem, TestimonialSlide } from '../types';
 
 export const MODULES_DATA: ModuleItem[] = [
   {
@@ -444,6 +444,27 @@ export const TESTIMONIALS_DATA: TestimonialItem[] = [
     rating: 5,
     highlight: 'Comparativos direto ao ponto',
     quote: 'O material de bolso e as tabelas comparativas (principalmente fala x linguagem e apraxia x disartria) valem cada centavo. Direto ao ponto, sem enrolação e com um design limpo e claro que facilita demais a rotina.'
+  }
+];
+
+export const TESTIMONIAL_SLIDES: TestimonialSlide[] = [
+  {
+    id: 'slide-1',
+    image: 'https://i.postimg.cc/xdF7Fw3P/Chat-GPT-Image-30-de-ago-de-2026-22-38-24.png',
+    alt: 'Depoimento real de aluna recomendando o Fono Visual',
+    caption: 'Depoimento verificado de aluna sobre a didática e ilustrações'
+  },
+  {
+    id: 'slide-2',
+    image: 'https://i.postimg.cc/k5hZh0vv/Chat-GPT-Image-30-de-ago-de-2026-22-38-32.png',
+    alt: 'Feedback de profissional fonoaudióloga sobre o material',
+    caption: 'Feedback sobre o auxílio nos atendimentos e revisões'
+  },
+  {
+    id: 'slide-3',
+    image: 'https://i.postimg.cc/R0b8bkLw/Chat-GPT-Image-30-de-ago-de-2026-22-38-41.png',
+    alt: 'Depoimento destacando a praticidade e clareza dos resumos',
+    caption: 'Relato sobre a facilidade de memorização e praticidade'
   }
 ];
 

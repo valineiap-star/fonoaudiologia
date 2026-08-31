@@ -65,6 +65,13 @@ export interface TestimonialItem {
   isExample?: boolean;
 }
 
+export interface TestimonialSlide {
+  id: string;
+  image: string;
+  alt: string;
+  caption?: string;
+}
+
 export interface PricingPlan {
   id: 'essencial' | 'completo';
   name: string;
