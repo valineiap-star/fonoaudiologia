@@ -9,11 +9,6 @@ export const TopBanner: React.FC<TopBannerProps> = ({ onCtaClick }) => {
   return (
     <div className="w-full bg-gradient-to-r from-teal-50 via-emerald-50 to-teal-50 text-slate-800 text-xs sm:text-sm font-semibold py-2.5 px-4 border-b border-teal-200/80 shadow-2xs relative z-30">
       <div className="max-w-7xl mx-auto flex items-center justify-center gap-2.5 text-center flex-wrap">
-        <span className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-teal-100 text-teal-800 text-[11px] font-bold uppercase tracking-wider border border-teal-300/80">
-          <span className="w-1.5 h-1.5 rounded-full bg-teal-600 animate-pulse" />
-          Atenção
-        </span>
-
         <div className="flex items-center gap-2">
           <Timer className="w-4 h-4 text-teal-700 shrink-0" />
           <span className="tracking-wide uppercase text-slate-800 font-bold">
