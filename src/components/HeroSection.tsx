@@ -70,9 +70,6 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onCtaClick }) => {
             className="w-full sm:w-auto px-10 py-4 bg-teal-600 hover:bg-teal-700 active:bg-teal-800 text-white font-extrabold text-base rounded-xl shadow-xl shadow-teal-700/25 hover:shadow-2xl transition-all transform hover:-translate-y-0.5 flex items-center justify-center gap-3 cursor-pointer group"
           >
             <span>QUERO ACESSAR O FONO VISUAL</span>
-            <span className="px-2.5 py-0.5 text-xs bg-teal-800/60 rounded-md font-bold text-teal-200 group-hover:bg-teal-900 transition-colors">
-              PDF 100% Digital
-            </span>
           </button>
           
           <p className="text-xs text-slate-500 font-medium flex items-center justify-center gap-1.5">
